@@ -1,0 +1,232 @@
+{
+  "electronics": {
+    "smartphones": [
+      {
+        "title": "Samsung Galaxy S10+ (Black)",
+        "rent3": "1500",
+        "rent6": "1300",
+        "refundable": "4000",
+        "description": [
+          "Capacity/Size : 6.4",
+          "RAM: 8 GB",
+          "ROM: 128 GB",
+          "Android 9 Pie,Exynos 9820 processor",
+          "Supports HDR 10+ content",
+          "Nano-Dual SIM with VoLTE"
+        ],
+        "img": "https://p.rmjo.in/moodShot/mq8fn9qb-1024x512.jpg"
+      },
+      {
+        "title": "Apple iPhone 6S (Space Grey)",
+        "rent3": "700",
+        "rent6": "600",
+        "refundable": "1800",
+        "description": [
+          "Capacity/Size : 4.7",
+          "RAM: 2GB, ROM: 32GB",
+          "iOS 13, Apple A9 with M9 motion coprocessor",
+          "1715 mAh battery with 3D Touch",
+          "Camera: Front 5MP | Rear 12MP",
+          "Touch ID fingerprint sensor, 3D Touch"
+        ],
+        "img": "https://p.rmjo.in/moodShot/vsk1xic7-1024x512.jpg"
+      },
+      {
+        "title": "OnePlus 7 (Mirror Gray)",
+        "rent3": "900",
+        "rent6": "750",
+        "refundable": "2500",
+        "description": [
+          "Capacity/Size : 6.41",
+          "RAM: 6 GB, ROM: 128 GB",
+          "Android Pie 9, Snapdragon 855",
+          "Faster UFS 3.0 Storage",
+          "Nano-Dual SIM with VoLTE"
+        ],
+        "img": "https://p.rmjo.in/moodShot/zorunxgt-1024x512.jpg"
+      },
+      {
+        "title": "OnePlus 7 Pro (Mirror Gray)",
+        "rent3": "1000",
+        "rent6": "850",
+        "refundable": "3500",
+        "description": [
+          "Capacity/Size : 6.67",
+          " RAM: 6 GB, ROM: 128 GB",
+          "Android 9 Pie, Snapdragon 855",
+          "Supports HDR 10+ content",
+          "Nano-Dual SIM with VoLTE"
+        ],
+        "img": "https://p.rmjo.in/moodShot/q5l5kxcl-1024x512.jpg"
+      },
+      {
+        "title": "Apple iPhone XR 64GB (Black)",
+        "rent3": "1500",
+        "rent6": "1300",
+        "refundable": "4000",
+        "description": [
+          "Capacity/Size : 6.1",
+          "RAM: 3GB, ROM: 64GB",
+          " Secure & reliable Face ID",
+          "Wireless Qi charging compatible",
+          "IP67 dust/water resistant",
+          "Nano SIM with VoLTE"
+        ],
+        "img": "https://p.rmjo.in/moodShot/a0y3f9ck-1024x512.jpg"
+      },
+      {
+        "title": "Vivo V11 Pro ( Gold )",
+        "rent3": "850",
+        "rent6": "700",
+        "refundable": "2000",
+        "description": [
+          "Capacity/Size : 6.41",
+          "RAM: 6GB, Storage: 64GB",
+          "25 MP front camera, 12+5 MP Rear camera",
+          "Face unlock and fingerprint sensor",
+          "3400 mAH lithium ion battery",
+          "Android v8.1 Oreo OS"
+        ],
+        "img": "https://p.rmjo.in/moodShot/cu6laryv-1024x512.jpg"
+      },
+      {
+        "title": "Galaxy S10e (Black)",
+        "rent3": "1500",
+        "rent6": "1350",
+        "refundable": "4500",
+        "description": [
+          "Capacity/Size : 5.8",
+          "RAM: 6GB, ROM: 128GB",
+          "Android Pie 9, Exynos 9820 processor",
+          "3100mAH lithium-ion battery",
+          "Hybrid Dual SIM with VoLTE"
+        ],
+        "img": "https://p.rmjo.in/moodShot/px2e0ebh-1024x512.jpg"
+      },
+      {
+        "title": "Samsung Galaxy A7 (Gold)",
+        "rent3": "620",
+        "rent6": "550",
+        "refundable": "3500",
+        "description": [
+          "Capacity/Size : 6",
+          "RAM: 4GB, Storage: 64GB",
+          "Triple camera: 24MP, 8MP & 5MP",
+          " Low light, wide-angle and live focus",
+          "Face unlock and fingerprint sensor",
+          "Dual SIM"
+        ],
+        "img": "https://p.rmjo.in/moodShot/s6bsy3mq-1024x512.jpg"
+      },
+      {
+        "title": "Galaxy Note 8 (Black)",
+        "rent3": "1500",
+        "rent6": "1300",
+        "refundable": "4000",
+        "description": [
+          "Capacity/Size : 6.3",
+          "RAM: 6GB, ROM: 64GB",
+          "12MP Dual Camera with Dual OIS",
+          " Accompanied by Signature Pen",
+          "Touch focus and face smile detection",
+          "Comes with charger and USB cable"
+        ],
+        "img": "https://p.rmjo.in/moodShot/pqa11dle-1024x512.jpg"
+      }
+    ],
+    "smart_devices": [
+      {
+        "title": "Amazon Fire TV Stick",
+        "rent3": "120",
+        "rent6": "100",
+        "refundable": "300",
+        "description": [
+          "Capacity/Size : 43.3 g",
+          "HD (720p), Full HD(1080P/60fps)",
+          "HDMI output with Bluetooth 4.1+LE",
+          "8 GB internal storage",
+          "Dolby Audio & 5.1 Surround Sound"
+        ],
+        "img": "https://p.rmjo.in/moodShot/a0zja0h7-1024x512.jpg",
+        "inStock": false
+      },
+      {
+        "title": "Amazon Echo",
+        "rent3": "200",
+        "rent6": "170",
+        "refundable": "500",
+        "description": [
+          "Capacity/Size : 821 g",
+          "Powerful sound with Alexa calling",
+          "3.5 mm cable or Bluetooth",
+          "Streaming music",
+          "Dual speakers powered by Dolby"
+        ],
+        "img": "https://p.rmjo.in/moodShot/ticpw82j-1024x512.jpg",
+        "inStock": false
+      },
+      {
+        "title": "boAt AAVANTE",
+        "rent3": "200",
+        "rent6": "170",
+        "refundable": "500",
+        "description": [
+          "Capacity/Size : 6.4 kg",
+          "Total power output 120W, 60W subwoofer",
+          "Wireless music streaming via Bluetooth",
+          "Other connectivity modes: HDMI/Aux-in/USB",
+          "2 Channel - 3D stereo surround sound"
+        ],
+        "img": "https://p.rmjo.in/moodShot/taz1fga2-1024x512.jpg",
+        "inStock": false
+      },
+      {
+        "title": "Google Home",
+        "rent3": "230",
+        "rent6": "180",
+        "refundable": "500",
+        "description": [
+          "Capacity/Size : 477 g",
+          "Get answers from Google",
+          "Voice-controlled WiFi speaker",
+          "Control home automation devices",
+          "Play music, audiobooks & stream shows",
+          "Comes with power adapter and cable"
+        ],
+        "img": "https://p.rmjo.in/moodShot/lzsk3vrh-1024x512.jpg",
+        "inStock": false
+      }
+    ]
+  },
+  "furniture": {
+    "bedroom": [
+      {
+        "title": "Queen Foam Mattress (6x5)",
+        "rent3": "259",
+        "rent6": "200",
+        "refundable": "400",
+        "description": "Foam filling for support",
+        "img": "https://p.rmjo.in/moodShot/cx9p2nbh-1024x512.jpg",
+        "inStock": true
+      },
+      {
+        "title": "Single XL Coir & Foam Mattress (6.6x3)",
+        "rent3": "189",
+        "rent6": "150",
+        "refundable": "300",
+        "description": "Coir & Foam filling for support",
+        "img": "https://p.rmjo.in/moodShot/j4fscs12-1024x512.jpg",
+        "inStock": true
+      },
+      {
+        "title": "Napster Metal Queen Bed (6x5)",
+        "rent3": "300",
+        "rent6": "250",
+        "refundable": "500",
+        "description": "Lightweight and rust-free",
+        "img": "https://p.rmjo.in/moodShot/6wkxqfzq-1024x512.jpg",
+        "inStock": true
+      }
+    ]
+  }
+}
