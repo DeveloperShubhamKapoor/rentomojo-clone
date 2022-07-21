@@ -91,3 +91,20 @@
     top: 2px;
     color: #717171;
 }
+.categories_container{
+    width:80%;
+    margin:auto;
+    display: flex;
+    gap:20px;
+    margin-top: 30px;
+}
+.categories_card{
+    width:170px;
+    height:100px;
+    background: #fff;
+    border: 1px solid #e2eaf0;
+    border-radius: 10px;
+}
+.categories_card:hover{
+    box-shadow: 0 8px 14px 0 #bfcfdc;
+}
