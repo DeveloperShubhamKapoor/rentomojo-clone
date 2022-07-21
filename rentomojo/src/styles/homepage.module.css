@@ -1,0 +1,93 @@
+
+*{
+    font-family: 'Mulish', sans-serif;
+}
+.navbar_container{
+    border:1px solid black;
+}
+.login_signup_btn{
+    color:white;
+    background-color: #e53e3e ;
+    border-radius:10px ;
+    width:8.5rem;
+    transition: all .2s ease-in;
+    font-size: 14px;
+    margin: 0px 10px 0px 10px;
+    padding: 1px 15px 1px 15px;
+}
+
+.login_signup_btn:hover{
+    border:1px solid #e53e3e;
+    color:#e53e3e;
+    background-color: white;
+}
+.footer_container{
+    border:1px solid black;
+    height: auto;
+    width:100%;
+    margin-top: 30px;
+    background-color: #f5f7fa;
+}
+.footer_text_container{
+    width:75%;
+    margin: auto;
+    background-color: #f5f7fa;
+    margin-top:70px; 
+}
+.footer_text_set{
+    font-size: 14px;
+    color:#b4b5b6;
+}
+.footer_tail_details{
+    width:75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    background-color: #f5f7fa;
+    margin-right: 18%;
+}
+.btn_play_store{
+    width: 100px;
+    height: 30px;
+    display: inline;
+}
+.font_bold{
+    font-weight: 500;
+}
+.list_items_set{
+    list-style: none;
+    margin-top: 15px;
+    line-height: 30px;
+    font-size: 14px;
+    color:#747474;
+}
+.list_items_set>li:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+.horizontal_line{
+    width: 75%;
+    margin-left:13%;
+    color:#747474;
+}
+.footer_icons_container{
+    width: 75%;
+    border:1px solid black;
+    height: auto;
+    display: flex;
+    margin: auto;
+}
+.icon_set_facebook{
+    border: 1px solid #717171;
+    background: #f5f7fa;
+    border-radius: 50%;
+    width: 40px;
+    display: block;
+    color: #717171;
+    transform: scale(.8);
+}
+.rento_icons{
+    top: 2px;
+    color: #717171;
+}
