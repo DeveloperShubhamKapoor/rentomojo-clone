@@ -3,7 +3,20 @@
     font-family: 'Mulish', sans-serif;
 }
 .navbar_container{
-    border:1px solid black;
+    position: sticky;
+    top: 30px;
+    width:85%;
+    margin: auto;
+}
+.carousel_container{
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 30px;
+}
+.image_set{
+    width: 100%;
+    border-radius: 20px;
 }
 .login_signup_btn{
     color:white;

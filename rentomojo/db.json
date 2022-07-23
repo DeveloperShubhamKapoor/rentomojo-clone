@@ -1,7 +1,8 @@
 {
-  "electronics": {
+  
     "smartphones": [
       {
+        "id":"Samsung Galaxy S10+ (Black)",
         "title": "Samsung Galaxy S10+ (Black)",
         "rent3": "1500",
         "rent6": "1300",
@@ -17,6 +18,7 @@
         "img": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg"
       },
       {
+        "id": "Apple iPhone 6S (Space Grey)",
         "title": "Apple iPhone 6S (Space Grey)",
         "rent3": "700",
         "rent6": "600",
@@ -32,6 +34,7 @@
         "img": "https://p.rmjo.in/productSquare/fgcl0o0i-500x500.jpg"
       },
       {
+        "id": "OnePlus 7 (Mirror Gray)",
         "title": "OnePlus 7 (Mirror Gray)",
         "rent3": "900",
         "rent6": "750",
@@ -46,6 +49,7 @@
         "img": "https://p.rmjo.in/productSquare/lbf7407m-500x500.jpg"
       },
       {
+        "id": "OnePlus 7 Pro (Mirror Gray)",
         "title": "OnePlus 7 Pro (Mirror Gray)",
         "rent3": "1000",
         "rent6": "850",
@@ -60,6 +64,7 @@
         "img": "https://p.rmjo.in/productSquare/mxzy0xf9-500x500.jpg"
       },
       {
+        "id": "Apple iPhone XR 64GB (Black)",
         "title": "Apple iPhone XR 64GB (Black)",
         "rent3": "1500",
         "rent6": "1300",
@@ -75,6 +80,7 @@
         "img": "https://p.rmjo.in/productSquare/vmbb6qhr-500x500.jpg"
       },
       {
+        "id": "Vivo V11 Pro ( Gold )",
         "title": "Vivo V11 Pro ( Gold )",
         "rent3": "850",
         "rent6": "700",
@@ -90,6 +96,7 @@
         "img": "https://p.rmjo.in/productSquare/qmf066y6-500x500.jpg"
       },
       {
+        "id": "Galaxy S10e (Black)",
         "title": "Galaxy S10e (Black)",
         "rent3": "1500",
         "rent6": "1350",
@@ -104,6 +111,7 @@
         "img": "https://p.rmjo.in/productSquare/vhk0dft5-500x500.jpg"
       },
       {
+        "id": "Samsung Galaxy A7 (Gold)",
         "title": "Samsung Galaxy A7 (Gold)",
         "rent3": "620",
         "rent6": "550",
@@ -119,6 +127,7 @@
         "img": "https://p.rmjo.in/productSquare/4gv7oyvc-500x500.jpg"
       },
       {
+        "id": "Galaxy Note 8 (Black)",
         "title": "Galaxy Note 8 (Black)",
         "rent3": "1500",
         "rent6": "1300",
@@ -136,6 +145,7 @@
     ],
     "smart_devices": [
       {
+        "id": "Amazon Fire TV Stick",
         "title": "Amazon Fire TV Stick",
         "rent3": "120",
         "rent6": "100",
@@ -197,7 +207,7 @@
         "inStock": false
       }
     ]
-  },
+  ,
   "furniture": {
     "bedroom": [
       {

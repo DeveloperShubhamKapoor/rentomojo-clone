@@ -3,8 +3,8 @@
 }
 .smartphones_container{
     width: 60%;
-    margin-left: 30%;
-    margin-top: 20px;
+    margin-left: 33%;
+    margin-top: -21%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     row-gap: 20px;
@@ -25,4 +25,157 @@
 }
 .smartphone_price{
     margin-left: -5%;
+    font-weight: 600;
+}
+.sidebar_container{
+    width:28%;
+    padding-left: 8%;
+    margin-top: 50px;
+}
+.sidebar_box1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.btn_reset{
+    border: 1px solid #e6e6e6;
+    padding: 5px 10px 5px 10px;
+    font-weight: 600;
+}
+.btn_reset:hover{
+    border: 1px solid black;
+}
+.rental_tenure_box{
+    border: 1px solid #e6e6e6;
+    height:90px;
+    padding:7px 20px 0px 20px ;
+}
+.set_info_btn{
+    border-radius: 40%;
+    font-size: 10px;
+    margin-right: 15px;
+    size:"20px"
+}
+.slider_container{
+    margin-top: 15px;
+}
+.product_type_container{
+    border: 1px solid #e6e6e6;
+    height:auto;
+    padding:7px 20px 0px 20px ;
+    margin-top:20px;
+}
+.product_type_set{
+    display: flex;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+.product_set{
+    margin-left: 10px;
+}
+.smartphone_container_main{
+    display: flex;
+    width: 100%;
+    height:auto;
+    border: 1px solid black;
+}
+.smartphone_info_container{
+    width: 70%;
+    height: 2000px;
+}
+.image_container{
+    width: 100%;
+    height:60%;
+}
+.image_container>img{
+    width: 100%;
+    height:100%;
+}
+.why_rent_container{
+    display: flex;
+}
+.whys_rent_from_us{
+    width: 50%;
+    height:70px;
+    font-size: 23px;
+    background-color: #f5f7fa;
+    padding: 13px 0px 0px 20px ;
+    border: 1px solid 
+    #e6e6e6;
+}
+.product_details_cont{
+    width: 50%;
+    height:70px;
+    font-size: 23px;
+    padding: 13px 0px 0px 20px ;
+    border-top: 2px solid red;
+}
+.covid_info_box{
+    display: flex;
+    width: 80%;
+    height: 80px;
+    border: 1px solid #bfcfdc;
+    margin: auto;
+    margin-top: 35px;
+    padding: 19px 19px;
+}
+.product_details_heading{
+    font-size: 24px;
+    font-weight: 500;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.red_border{
+    width: 45px;
+    border-bottom: 2px solid red;
+    margin-left: 10%;
+}
+.product_details{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+}
+.product_image_container{
+    width: 40%;
+    height: auto;
+}
+.product_image_container>img{
+    width: 100%;
+    height: 350px;
+}
+.product_info_container{
+    width: 60%;
+    height:auto;
+    padding-left: 35px;
+}
+.grey_border{
+    width: 40px;
+    border-bottom: 2px solid 
+    #bababa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.safety_usage_list{
+    width: 50%;
+    font-size: 14px;
+    color: #a1a1a1;
+    padding-left:8px;
+}
+.usage_description_cont{
+    width:100%;
+    margin: auto;
+    display: flex;
+}
+.rental_info{
+    display: flex;
+    width:100%;
+    border-top: 1px solid #a1a1a1;
+    justify-content: space-between;
+    font-size: 14px;
+    color:#a1a1a1;
+    margin-top: 50px;
+    padding-top: 15px;
 }
