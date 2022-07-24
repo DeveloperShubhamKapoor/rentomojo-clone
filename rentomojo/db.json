@@ -145,7 +145,7 @@
     ],
     "smart_devices": [
       {
-        "id": "Amazon Fire TV Stick",
+        "user_id": "Amazon Fire TV Stick",
         "title": "Amazon Fire TV Stick",
         "rent3": "120",
         "rent6": "100",
@@ -161,6 +161,7 @@
         "inStock": false
       },
       {
+        "user_id":"Amazon Echo",
         "title": "Amazon Echo",
         "rent3": "200",
         "rent6": "170",
@@ -176,6 +177,7 @@
         "inStock": false
       },
       {
+        "user_id":"boAt AAVANTE",
         "title": "boAt AAVANTE",
         "rent3": "200",
         "rent6": "170",
@@ -191,6 +193,7 @@
         "inStock": false
       },
       {
+        "user_id":"Google Home",
         "title": "Google Home",
         "rent3": "230",
         "rent6": "180",

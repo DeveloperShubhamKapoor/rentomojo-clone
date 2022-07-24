@@ -35,10 +35,9 @@
     background-color: white;
 }
 .footer_container{
-    border:1px solid black;
     height: auto;
     width:100%;
-    margin-top: 30px;
+    margin-top: 70px;
     background-color: #f5f7fa;
 }
 .footer_text_container{
