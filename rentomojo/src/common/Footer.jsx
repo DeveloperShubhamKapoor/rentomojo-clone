@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr className={styles.horizontal_line} />
-            <div className={styles.footer_icons_container}>
+            {/* <div className={styles.footer_icons_container}>
                 <div>
                     <p>
                     © 2022. Edunetwork Pvt. Ltd.
@@ -80,7 +80,7 @@ const Footer = () => {
                     <a className={styles.icon_set_facebook} href=""></a>
                     <Icon className={styles.rento_icons} as={FaFacebookF} />
                 </div>
-            </div>
+            </div> */}
         </div>
     </div>
   )

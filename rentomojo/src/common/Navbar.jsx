@@ -11,6 +11,7 @@ import styles from "../styles/homepage.module.css";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import  logo  from "../images/rentomojo.jpeg";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
@@ -21,7 +22,7 @@ const Navbar = () => {
         color="black"
       >
         <Flex justifyContent="space-evenly">
-          <img src={logo} alt="rentomojologo" />
+          <Link to="/"><img src={logo} alt="rentomojologo" /></Link>
           <Button
             rightIcon={<ChevronDownIcon />}
             colorScheme="black"

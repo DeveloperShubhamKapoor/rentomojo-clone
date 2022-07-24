@@ -4,13 +4,14 @@ import Footer from "../common/Footer";
 import Navbar from "../common/Navbar";
 import styles from "../styles/smartphones.module.css";
 
-const SmartPhone = () => {
+const SmartDevice = () => {
   const params = useParams();
   const [data, setData] = useState({});
   const [description, setDescription] = useState([]);
   console.log("params", params);
+  console.log("data",data)
   useEffect(() => {
-    fetch(`http://localhost:8080/smartphones/${params.id}`)
+    fetch(`http://localhost:8080/smart_devices/${params.user_id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -93,4 +94,4 @@ const SmartPhone = () => {
   );
 };
 
-export default SmartPhone;
+export default SmartDevice;
