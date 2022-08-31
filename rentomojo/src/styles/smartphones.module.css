@@ -179,3 +179,9 @@
     margin-top: 50px;
     padding-top: 15px;
 }
+ /* css for add to cart right side bar */
+
+.rightsidebar_container{
+    width: 30%;
+    border: 1px solid black;
+}

@@ -1,8 +1,13 @@
 import React from 'react'
+import styles from "../styles/smartphones.module.css"
 
-const RightSidebar = () => {
+const RightSidebar = ({data}) => {
   return (
-    <div>RightSidebar</div>
+    <div>
+      <div className={styles.rightsidebar_container}>
+
+      </div>
+    </div>
   )
 }
 

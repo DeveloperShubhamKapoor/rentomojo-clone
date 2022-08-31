@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../common/Footer";
 import Navbar from "../common/Navbar";
+import RightSidebar from "../common/RightSidebar";
 import styles from "../styles/smartphones.module.css";
 
 const SmartPhone = () => {
@@ -79,16 +80,20 @@ const SmartPhone = () => {
                 </div>
               </div>
               <div className={styles.rental_info}>
-                <p>MONTHLY RENTAL: <b style={{color:"black"}}>{data.rent3}</b></p>
-                <p>DEPOSIT: <b style={{color:"black"}}>{data.refundable}</b></p>
+                <p>
+                  MONTHLY RENTAL: <b style={{ color: "black" }}>{data.rent3}</b>
+                </p>
+                <p>
+                  DEPOSIT: <b style={{ color: "black" }}>{data.refundable}</b>
+                </p>
               </div>
             </div>
           </div>
         </div>
         {/* Right SideBar */}
-        <div></div>
+        <RightSidebar />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
