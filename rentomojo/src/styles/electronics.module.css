@@ -24,14 +24,13 @@
     padding: 10px;
 }
 .category_card {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     cursor: pointer;
     perspective: 1000px;
-    transition: all .2s linear;
+    transform:translateY(0);
+    transition: .5s ease-out;
 }
 .category_card:hover{
-    transition: margin-top 4s 1s ;
+    transform: translateY(1);
 }
 .category_card_img{
     width:100%;

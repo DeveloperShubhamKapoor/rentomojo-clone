@@ -116,6 +116,7 @@
     background: #fff;
     border: 1px solid #e2eaf0;
     border-radius: 10px;
+    transition: .25s ease-out;
 }
 .categories_card:hover{
     box-shadow: 0 8px 14px 0 #bfcfdc;

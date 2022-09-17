@@ -24,7 +24,7 @@ const SmartPhones = () => {
         {smartphonesData.map((item) => (
           <Link to={`/electronics/${item.id}`}>
             <div className={styles.smartphones_card} key={item.title}>
-              <img
+              <img 
                 className={styles.smartphone_card_img}
                 src={item.img}
                 alt=""
