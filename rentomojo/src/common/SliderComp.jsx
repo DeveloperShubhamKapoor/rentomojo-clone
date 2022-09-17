@@ -21,7 +21,7 @@ const SliderComp = () => {
           defaultValue={3}
           min={3}
           max={6}
-          colorScheme="teal"
+          colorScheme="red"
           onChange={(v) => setSliderValue(v)}
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
@@ -37,13 +37,13 @@ const SliderComp = () => {
           </SliderTrack>
           <Tooltip
             hasArrow
-            bg="teal.500"
+            bg="red.500"
             color="white"
             placement="top"
             isOpen={showTooltip}
             label={`${sliderValue}`}
           >
-            <SliderThumb />
+            <SliderThumb size="md" style={{border:"2px solid red"}} />
           </Tooltip>
         </Slider>
       </div>

@@ -12,7 +12,9 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import  logo  from "../images/rentomojo.jpeg";
 import { Link } from "react-router-dom";
+import LoginModal from "./LoginModal";
 const Navbar = () => {
+  
   return (
     <div>
       <Box
@@ -38,7 +40,7 @@ const Navbar = () => {
           >
             Cart
           </Button>
-          <button className={styles.login_signup_btn}>LOGIN/SIGNUP</button>
+          <LoginModal />
         </Flex>
       </Box>
     </div>

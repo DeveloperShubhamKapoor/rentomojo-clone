@@ -80,7 +80,7 @@
     margin-top: 20px;
 }
 .smartphone_info_container{
-    width: 70%;
+    width: 75%;
     height: 2000px;
 }
 .image_container{
@@ -178,4 +178,70 @@
     color:#a1a1a1;
     margin-top: 50px;
     padding-top: 15px;
+}
+ /* css for add to cart right side bar */
+
+.price_info_container{
+    width:25%;
+    border:1px solid black;
+    height: auto;
+}
+.info_strip{
+    background-color: #f5f7fa;
+    margin-top:10px;
+    padding: 8px 10px;
+    height:40px;
+    color: #bebfc1;
+    font-size: 14px;
+}
+.slider_rent{
+    width: 90%;
+    margin: auto;
+}
+.rent_info_box{
+    width: 90%;
+    margin:auto;
+    border:1px solid grey;
+    border-radius: 5px;
+    margin-top: 10%;
+}
+.rent_refund_box_info{
+    display: flex;
+}
+.rent_price_details{
+    width: 50%;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 10px 5px 25px 18px;
+}
+.refund_details{
+    width: 50%;
+    border-bottom: 1px solid grey;
+    padding: 10px 5px 25px 18px;
+}
+.additional_info{
+    display: flex;
+    font-size: 12px;
+    color: #a1a1a1;
+    justify-content: space-evenly;
+    padding: 5px 15px 8px 1px;
+}
+.add_to_cart_btn_div{
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+}
+.add_to_cart_btn{
+    padding: 9px 4px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-color: #e53e3e;
+}
+.alert_dialog_box{
+    width: 30%;
+    position: absolute;
+    right: 15%;
+    top:2.5%;
+    animation: 5s ease-in-out 
 }
