@@ -5,24 +5,32 @@ import Navbar from "../common/Navbar";
 import { ImCart } from "react-icons/im";
 import SliderComp from "../common/SliderComp";
 import styles from "../styles/smartphones.module.css";
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 
 const SmartPhone = () => {
   const params = useParams();
+  const toast = useToast();
   const [data, setData] = useState({});
   const [display, setDisplay] = useState("none");
   console.log("data", data);
   const [description, setDescription] = useState([]);
-  const handleOnClick = () => {
-    console.log("clocked");
-    setDisplay(" ");
+  const handleCart = () => {
+    fetch("http://localhost:8080/cart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    toast({
+      title: "One Item added",
+      position: "top",
+      description: data.title,
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+    });
   };
-  console.log("params", params);
   useEffect(() => {
     fetch(`http://localhost:8080/smartphones/${params.id}`)
       .then((res) => res.json())
@@ -31,13 +39,6 @@ const SmartPhone = () => {
   return (
     <div>
       <Navbar />
-      <div className={styles.alert_dialog_box}>
-        <Alert display={display} status="success" variant="left-accent">
-          <AlertIcon />
-          Data uploaded to the server. Fire on!
-        </Alert>
-      </div>
-
       <div className={styles.smartphone_container_main}>
         <div className={styles.smartphone_info_container}>
           <div className={styles.image_container}>
@@ -144,7 +145,7 @@ const SmartPhone = () => {
             </div>
           </div>
           <div className={styles.add_to_cart_btn_div}>
-            <button onClick={handleOnClick} className={styles.add_to_cart_btn}>
+            <button onClick={handleCart} className={styles.add_to_cart_btn}>
               {" "}
               {ImCart} Book Your Plan
             </button>

@@ -1,247 +1,241 @@
-*{
-    font-family: 'Mulish', sans-serif;
+* {
+  font-family: "Mulish", sans-serif;
 }
-.smartphones_container{
-    width: 60%;
-    margin-left: 33%;
-    margin-top: -21%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    row-gap: 20px;
+.smartphones_container {
+  width: 60%;
+  margin-left: 33%;
+  margin-top: -21%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
 }
-.smartphones_card{
-    width: 95%;
-    height:350px;
-    border: 1px solid #e6e6e6;
+.smartphones_card {
+  width: 95%;
+  height: 350px;
+  border: 1px solid #e6e6e6;
 }
-.smartphone_card_img{
-    width: 100%;
-    height:75%
+.smartphone_card_img {
+  width: 100%;
+  height: 75%;
 }
-.smartphone_title{
-    margin-top: 10px;
-    font-size: 15px;
-    margin-left: 8%;
+.smartphone_title {
+  margin-top: 10px;
+  font-size: 15px;
+  margin-left: 8%;
 }
-.smartphone_price{
-    margin-left: -5%;
-    font-weight: 600;
+.smartphone_price {
+  margin-left: -5%;
+  font-weight: 600;
 }
-.sidebar_container{
-    width:28%;
-    padding-left: 8%;
-    margin-top: 50px;
+.sidebar_container {
+  width: 28%;
+  padding-left: 8%;
+  margin-top: 50px;
 }
-.sidebar_box1{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+.sidebar_box1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
-.btn_reset{
-    border: 1px solid #e6e6e6;
-    padding: 5px 10px 5px 10px;
-    font-weight: 600;
+.btn_reset {
+  border: 1px solid #e6e6e6;
+  padding: 5px 10px 5px 10px;
+  font-weight: 600;
 }
-.btn_reset:hover{
-    border: 1px solid black;
+.btn_reset:hover {
+  border: 1px solid black;
 }
-.rental_tenure_box{
-    border: 1px solid #e6e6e6;
-    height:90px;
-    padding:7px 20px 0px 20px ;
+.rental_tenure_box {
+  border: 1px solid #e6e6e6;
+  height: 90px;
+  padding: 7px 20px 0px 20px;
 }
-.set_info_btn{
-    border-radius: 40%;
-    font-size: 10px;
-    margin-right: 15px;
-    size:"20px"
+.set_info_btn {
+  border-radius: 40%;
+  font-size: 10px;
+  margin-right: 15px;
+  size: "20px";
 }
-.slider_container{
-    margin-top: 15px;
+.slider_container {
+  margin-top: 15px;
 }
-.product_type_container{
-    border: 1px solid #e6e6e6;
-    height:auto;
-    padding:7px 20px 0px 20px ;
-    margin-top:20px;
+.product_type_container {
+  border: 1px solid #e6e6e6;
+  height: auto;
+  padding: 7px 20px 0px 20px;
+  margin-top: 20px;
 }
-.product_type_set{
-    display: flex;
-    color: #b3b3b3;
-    font-size: 14px;
+.product_type_set {
+  display: flex;
+  color: #b3b3b3;
+  font-size: 14px;
 }
-.product_set{
-    margin-left: 10px;
+.product_set {
+  margin-left: 10px;
 }
-.smartphone_container_main{
-    display: flex;
-    width: 100%;
-    height:auto;
-    margin-top: 20px;
+.smartphone_container_main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
 }
-.smartphone_info_container{
-    width: 75%;
-    height: 2000px;
+.smartphone_info_container {
+  width: 75%;
+  height: 2000px;
 }
-.image_container{
-    width: 100%;
-    height:60%;
+.image_container {
+  width: 100%;
+  height: 60%;
 }
-.image_container>img{
-    width: 100%;
-    height:100%;
+.image_container > img {
+  width: 100%;
+  height: 100%;
 }
-.why_rent_container{
-    display: flex;
+.why_rent_container {
+  display: flex;
 }
-.whys_rent_from_us{
-    width: 50%;
-    height:70px;
-    font-size: 23px;
-    background-color: #f5f7fa;
-    padding: 13px 0px 0px 20px ;
-    border: 1px solid 
-    #e6e6e6;
+.whys_rent_from_us {
+  width: 50%;
+  height: 70px;
+  font-size: 23px;
+  background-color: #f5f7fa;
+  padding: 13px 0px 0px 20px;
+  border: 1px solid #e6e6e6;
 }
-.product_details_cont{
-    width: 50%;
-    height:70px;
-    font-size: 23px;
-    padding: 13px 0px 0px 20px ;
-    border-top: 2px solid red;
+.product_details_cont {
+  width: 50%;
+  height: 70px;
+  font-size: 23px;
+  padding: 13px 0px 0px 20px;
+  border-top: 2px solid red;
 }
-.covid_info_box{
-    display: flex;
-    width: 80%;
-    height: 80px;
-    border: 1px solid #bfcfdc;
-    margin: auto;
-    margin-top: 35px;
-    padding: 19px 19px;
+.covid_info_box {
+  display: flex;
+  width: 80%;
+  height: 80px;
+  border: 1px solid #bfcfdc;
+  margin: auto;
+  margin-top: 35px;
+  padding: 19px 19px;
 }
-.product_details_heading{
-    font-size: 24px;
-    font-weight: 500;
-    width: 80%;
-    margin: auto;
-    margin-top: 30px;
+.product_details_heading {
+  font-size: 24px;
+  font-weight: 500;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
 }
-.red_border{
-    width: 45px;
-    border-bottom: 2px solid red;
-    margin-left: 10%;
+.red_border {
+  width: 45px;
+  border-bottom: 2px solid red;
+  margin-left: 10%;
 }
-.product_details{
-    width: 80%;
-    height: auto;
-    margin: auto;
-    margin-top: 15px;
-    display: flex;
+.product_details {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
 }
-.product_image_container{
-    width: 40%;
-    height: auto;
+.product_image_container {
+  width: 40%;
+  height: auto;
 }
-.product_image_container>img{
-    width: 100%;
-    height: 350px;
+.product_image_container > img {
+  width: 100%;
+  height: 350px;
 }
-.product_info_container{
-    width: 60%;
-    height:auto;
-    padding-left: 35px;
+.product_info_container {
+  width: 60%;
+  height: auto;
+  padding-left: 35px;
 }
-.grey_border{
-    width: 40px;
-    border-bottom: 2px solid 
-    #bababa;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.grey_border {
+  width: 40px;
+  border-bottom: 2px solid #bababa;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.safety_usage_list{
-    width: 50%;
-    font-size: 14px;
-    color: #a1a1a1;
-    padding-left:8px;
+.safety_usage_list {
+  width: 50%;
+  font-size: 14px;
+  color: #a1a1a1;
+  padding-left: 8px;
 }
-.usage_description_cont{
-    width:100%;
-    margin: auto;
-    display: flex;
+.usage_description_cont {
+  width: 100%;
+  margin: auto;
+  display: flex;
 }
-.rental_info{
-    display: flex;
-    width:100%;
-    border-top: 1px solid #a1a1a1;
-    justify-content: space-between;
-    font-size: 14px;
-    color:#a1a1a1;
-    margin-top: 50px;
-    padding-top: 15px;
+.rental_info {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #a1a1a1;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #a1a1a1;
+  margin-top: 50px;
+  padding-top: 15px;
 }
- /* css for add to cart right side bar */
+/* css for add to cart right side bar */
 
-.price_info_container{
-    width:25%;
-    border:1px solid black;
-    height: auto;
+.price_info_container {
+  width: 25%;
+  border: 1px solid black;
+  height: auto;
 }
-.info_strip{
-    background-color: #f5f7fa;
-    margin-top:10px;
-    padding: 8px 10px;
-    height:40px;
-    color: #bebfc1;
-    font-size: 14px;
+.info_strip {
+  background-color: #f5f7fa;
+  margin-top: 10px;
+  padding: 8px 10px;
+  height: 40px;
+  color: #bebfc1;
+  font-size: 14px;
 }
-.slider_rent{
-    width: 90%;
-    margin: auto;
+.slider_rent {
+  width: 90%;
+  margin: auto;
 }
-.rent_info_box{
-    width: 90%;
-    margin:auto;
-    border:1px solid grey;
-    border-radius: 5px;
-    margin-top: 10%;
+.rent_info_box {
+  width: 90%;
+  margin: auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 10%;
 }
-.rent_refund_box_info{
-    display: flex;
+.rent_refund_box_info {
+  display: flex;
 }
-.rent_price_details{
-    width: 50%;
-    border-right: 1px solid grey;
-    border-bottom: 1px solid grey;
-    padding: 10px 5px 25px 18px;
+.rent_price_details {
+  width: 50%;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 10px 5px 25px 18px;
 }
-.refund_details{
-    width: 50%;
-    border-bottom: 1px solid grey;
-    padding: 10px 5px 25px 18px;
+.refund_details {
+  width: 50%;
+  border-bottom: 1px solid grey;
+  padding: 10px 5px 25px 18px;
 }
-.additional_info{
-    display: flex;
-    font-size: 12px;
-    color: #a1a1a1;
-    justify-content: space-evenly;
-    padding: 5px 15px 8px 1px;
+.additional_info {
+  display: flex;
+  font-size: 12px;
+  color: #a1a1a1;
+  justify-content: space-evenly;
+  padding: 5px 15px 8px 1px;
 }
-.add_to_cart_btn_div{
-    width: 90%;
-    margin: auto;
-    margin-top: 6%;
+.add_to_cart_btn_div {
+  width: 90%;
+  margin: auto;
+  margin-top: 6%;
 }
-.add_to_cart_btn{
-    padding: 9px 4px;
-    width: 100%;
-    border-radius: 5px;
-    color: white;
-    background-color: #e53e3e;
+.add_to_cart_btn {
+  padding: 9px 4px;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  background-color: #e53e3e;
 }
-.alert_dialog_box{
-    width: 30%;
-    position: absolute;
-    right: 15%;
-    top:2.5%;
-    animation: 5s ease-in-out 
+.add_to_cart_btn_div :hover {
+  background-color: #e53e3e;
 }
