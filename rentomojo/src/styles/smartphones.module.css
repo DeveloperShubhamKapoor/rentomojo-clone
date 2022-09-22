@@ -236,6 +236,19 @@
   color: white;
   background-color: #e53e3e;
 }
-.add_to_cart_btn_div :hover {
+.browse_products{
+    padding: 9px 4px;
+  width: 43%;
+  border-radius: 5px;
+  border:1px solid #e53e3e;
+  color: #e53e3e;
+  background-color: white;
+}
+.view_cart{
+    padding: 9px 4px;
+  width: 43%;
+  border-radius: 5px;
+  color: white;
   background-color: #e53e3e;
 }
+

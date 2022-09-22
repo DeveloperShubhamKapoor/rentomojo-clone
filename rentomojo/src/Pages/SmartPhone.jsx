@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import Footer from "../common/Footer";
 import Navbar from "../common/Navbar";
 import { ImCart } from "react-icons/im";
 import SliderComp from "../common/SliderComp";
 import styles from "../styles/smartphones.module.css";
 import { useToast } from "@chakra-ui/react";
+import SmartPhones from "./SmartPhones";
+import Cart from "./Cart";
 
 const SmartPhone = () => {
   const params = useParams();
   const toast = useToast();
+  const navigate = useNavigate();
+  const [added, setAdded] = useState(false);
   const [data, setData] = useState({});
   const [display, setDisplay] = useState("none");
   console.log("data", data);
@@ -30,6 +34,13 @@ const SmartPhone = () => {
       duration: 2000,
       isClosable: true,
     });
+    setAdded(true);
+  };
+  const handleRedirect = () => {
+    navigate("/electronics/smartphones");
+  };
+  const handleRedirectCart = () => {
+    navigate("/cart");
   };
   useEffect(() => {
     fetch(`http://localhost:8080/smartphones/${params.id}`)
@@ -145,10 +156,33 @@ const SmartPhone = () => {
             </div>
           </div>
           <div className={styles.add_to_cart_btn_div}>
-            <button onClick={handleCart} className={styles.add_to_cart_btn}>
-              {" "}
-              {ImCart} Book Your Plan
-            </button>
+            {added ? (
+              <div
+                style={{
+                  margin: "auto",
+                  display: "flex",
+                  justifyContent: "space-around",
+                }}
+              >
+                <button
+                  onClick={handleRedirect}
+                  className={styles.browse_products}
+                >
+                  Browse More
+                </button>
+                <button
+                  className={styles.view_cart}
+                  onClick={handleRedirectCart}
+                >
+                  View Cart
+                </button>
+              </div>
+            ) : (
+              <button onClick={handleCart} className={styles.add_to_cart_btn}>
+                {" "}
+                {ImCart} Book Your Plan
+              </button>
+            )}
           </div>
         </div>
       </div>
