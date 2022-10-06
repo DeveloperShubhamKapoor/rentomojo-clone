@@ -226,38 +226,8 @@
         "Supports HDR 10+ content",
         "Nano-Dual SIM with VoLTE"
       ],
-      "img": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg"
-    },
-    {
-      "id": "Apple iPhone 6S (Space Grey)",
-      "title": "Apple iPhone 6S (Space Grey)",
-      "rent3": "700",
-      "rent6": "600",
-      "refundable": "1800",
-      "description": [
-        "Capacity/Size : 4.7",
-        "RAM: 2GB, ROM: 32GB",
-        "iOS 13, Apple A9 with M9 motion coprocessor",
-        "1715 mAh battery with 3D Touch",
-        "Camera: Front 5MP | Rear 12MP",
-        "Touch ID fingerprint sensor, 3D Touch"
-      ],
-      "img": "https://p.rmjo.in/productSquare/fgcl0o0i-500x500.jpg"
-    },
-    {
-      "id": "OnePlus 7 Pro (Mirror Gray)",
-      "title": "OnePlus 7 Pro (Mirror Gray)",
-      "rent3": "1000",
-      "rent6": "850",
-      "refundable": "3500",
-      "description": [
-        "Capacity/Size : 6.67",
-        " RAM: 6 GB, ROM: 128 GB",
-        "Android 9 Pie, Snapdragon 855",
-        "Supports HDR 10+ content",
-        "Nano-Dual SIM with VoLTE"
-      ],
-      "img": "https://p.rmjo.in/productSquare/mxzy0xf9-500x500.jpg"
+      "img": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg",
+      "planPrice": "1300"
     }
   ],
   "furniture": {

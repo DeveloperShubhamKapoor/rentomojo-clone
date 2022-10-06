@@ -1,49 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import Footer from "../common/Footer";
 import Navbar from "../common/Navbar";
-import { ImCart } from "react-icons/im";
-import SliderComp from "../common/SliderComp";
 import styles from "../styles/smartphones.module.css";
-import { useToast } from "@chakra-ui/react";
-import SmartPhones from "./SmartPhones";
-import Cart from "./Cart";
+import RightSidebar from "../common/RightSidebar";
+import { FilterContext } from "../context/FilterContext";
 
+const initData = {
+  id: "",
+  title: "",
+  img_full: "",
+  rent3: "",
+  rent6: "",
+  refundable: "",
+  img: "",
+  description: [],
+};
 const SmartPhone = () => {
   const params = useParams();
-  const toast = useToast();
-  const navigate = useNavigate();
-  const [added, setAdded] = useState(false);
-  const [data, setData] = useState({});
+  const [data, setData] = useState(initData);
+  const { sliderValue } = useContext(FilterContext);
   const [display, setDisplay] = useState("none");
-  console.log("data", data);
-  const [description, setDescription] = useState([]);
-  const handleCart = () => {
-    fetch("http://localhost:8080/cart", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    toast({
-      title: "One Item added",
-      position: "top",
-      description: data.title,
-      status: "success",
-      duration: 2000,
-      isClosable: true,
-    });
-    setAdded(true);
-  };
-  const handleRedirect = () => {
-    navigate("/electronics/smartphones");
-  };
-  const handleRedirectCart = () => {
-    navigate("/cart");
-  };
+
   useEffect(() => {
-    fetch(`http://localhost:8080/smartphones/${params.id}`)
+    fetch(`http://localhost:8080/smartphones/${params.smartphoneid}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -74,7 +54,7 @@ const SmartPhone = () => {
           <div className={styles.red_border}></div>
           <div className={styles.product_details}>
             <div className={styles.product_image_container}>
-              <img src={data.img_full} alt="" />
+              <img src={data.img} alt="" />
             </div>
             <div className={styles.product_info_container}>
               <h3 style={{ fontWeight: "500", fontSize: "18px" }}>
@@ -102,9 +82,9 @@ const SmartPhone = () => {
                     <li>Keep your phone locked to protect your data</li>
                   </ul>
                 </div>
-                <div>
+                <div className={styles.features_div}>
                   <p>Feature & Specs</p>
-                  {description.map((item) => (
+                  {data.description.map((item) => (
                     <ul className={styles.safety_usage_list}>
                       <li>{item}</li>
                     </ul>
@@ -112,9 +92,17 @@ const SmartPhone = () => {
                 </div>
               </div>
               <div className={styles.rental_info}>
-                <p>
-                  MONTHLY RENTAL: <b style={{ color: "black" }}>{data.rent3}</b>
-                </p>
+                {sliderValue == 3 ? (
+                  <p>
+                    MONTHLY RENTAL:{" "}
+                    <b style={{ color: "black" }}>{data.rent3}</b>
+                  </p>
+                ) : (
+                  <p>
+                    MONTHLY RENTAL:{" "}
+                    <b style={{ color: "black" }}>{data.rent6}</b>
+                  </p>
+                )}
                 <p>
                   DEPOSIT: <b style={{ color: "black" }}>{data.refundable}</b>
                 </p>
@@ -123,68 +111,7 @@ const SmartPhone = () => {
           </div>
         </div>
         {/* Right SideBar */}
-        <div className={styles.price_info_container}>
-          <h4>{data.title}</h4>
-          <div className={styles.info_strip}>
-            <p>How long do you want to rent this for? (months) </p>
-          </div>
-          <div className={styles.slider_rent}>
-            <SliderComp />
-          </div>
-          <div className={styles.rent_info_box}>
-            <div className={styles.rent_refund_box_info}>
-              <div className={styles.rent_price_details}>
-                <h2>
-                  {" "}
-                  <b>{data.rent3}</b> / mo{" "}
-                </h2>
-                <p style={{ fontSize: "10px", color: "grey" }}>Monthly Rent</p>
-              </div>
-              <div className={styles.refund_details}>
-                <h2>
-                  <b>{data.refundable}</b>
-                </h2>
-                <p style={{ fontSize: "10px", color: "grey" }}>
-                  Refundable Deposit
-                </p>
-              </div>
-            </div>
-            <div className={styles.additional_info}>
-              <p>7 days free trial</p>
-              <p>Free relocation</p>
-              <p>Free upgrades</p>
-            </div>
-          </div>
-          <div className={styles.add_to_cart_btn_div}>
-            {added ? (
-              <div
-                style={{
-                  margin: "auto",
-                  display: "flex",
-                  justifyContent: "space-around",
-                }}
-              >
-                <button
-                  onClick={handleRedirect}
-                  className={styles.browse_products}
-                >
-                  Browse More
-                </button>
-                <button
-                  className={styles.view_cart}
-                  onClick={handleRedirectCart}
-                >
-                  View Cart
-                </button>
-              </div>
-            ) : (
-              <button onClick={handleCart} className={styles.add_to_cart_btn}>
-                {" "}
-                {ImCart} Book Your Plan
-              </button>
-            )}
-          </div>
-        </div>
+        <RightSidebar data={data} />
       </div>
       <Footer />
     </div>

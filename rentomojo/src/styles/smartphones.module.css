@@ -81,15 +81,15 @@
 }
 .smartphone_info_container {
   width: 75%;
-  height: 2000px;
+  height: auto;
 }
 .image_container {
   width: 100%;
-  height: 60%;
+  height: auto;
 }
 .image_container > img {
   width: 100%;
-  height: 100%;
+  height: 600px;
 }
 .why_rent_container {
   display: flex;
@@ -131,14 +131,14 @@
   margin-left: 10%;
 }
 .product_details {
-  width: 80%;
+  width: 85%;
   height: auto;
   margin: auto;
   margin-top: 15px;
   display: flex;
 }
 .product_image_container {
-  width: 40%;
+  width: 35%;
   height: auto;
 }
 .product_image_container > img {
@@ -146,7 +146,7 @@
   height: 350px;
 }
 .product_info_container {
-  width: 60%;
+  width: 65%;
   height: auto;
   padding-left: 35px;
 }
@@ -161,6 +161,9 @@
   font-size: 14px;
   color: #a1a1a1;
   padding-left: 8px;
+}
+.features_div{
+  width: 70%;
 }
 .usage_description_cont {
   width: 100%;
@@ -181,8 +184,14 @@
 
 .price_info_container {
   width: 25%;
-  border: 1px solid black;
-  height: auto;
+  height: 450px;
+  position: sticky ;
+  top:1px;
+}
+.title_div{
+  padding: 5px ;
+  align-items: center;
+  text-align: center;
 }
 .info_strip {
   background-color: #f5f7fa;
