@@ -228,6 +228,22 @@
       ],
       "img": "https://p.rmjo.in/productSquare/yhx594uv-500x500.jpg",
       "planPrice": "1300"
+    },
+    {
+      "id": "OnePlus 7 Pro (Mirror Gray)",
+      "title": "OnePlus 7 Pro (Mirror Gray)",
+      "rent3": "1000",
+      "rent6": "850",
+      "refundable": "3500",
+      "description": [
+        "Capacity/Size : 6.67",
+        " RAM: 6 GB, ROM: 128 GB",
+        "Android 9 Pie, Snapdragon 855",
+        "Supports HDR 10+ content",
+        "Nano-Dual SIM with VoLTE"
+      ],
+      "img": "https://p.rmjo.in/productSquare/mxzy0xf9-500x500.jpg",
+      "planPrice": "850"
     }
   ],
   "furniture": {

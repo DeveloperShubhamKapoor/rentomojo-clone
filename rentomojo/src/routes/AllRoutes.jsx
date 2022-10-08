@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import RightSidebar from '../common/RightSidebar'
+import { OtpModal } from '../components/OtpModal'
 import Cart from '../Pages/Cart'
 import Electronics from '../Pages/Electronics'
 import Homepage from '../Pages/Homepage'
@@ -15,6 +16,7 @@ const AllRoutes = () => {
         <Routes>
             <Route path="/" element={<Homepage/>}/>
             <Route path="/cart" element ={<Cart/>}/>
+            <Route path="/authenticate" element={<OtpModal/>}/>
             <Route path="/electronics" element={<Electronics/>}/>
             <Route path="/electronics/smartphones" element={<SmartPhones/>}/>
             <Route path="/electronics/smart_devices" element={<SmartDevices/>}/>

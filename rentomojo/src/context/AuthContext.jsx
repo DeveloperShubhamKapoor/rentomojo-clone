@@ -7,7 +7,8 @@ export const AuthContextProvider = ({ children }) => {
     const initData = {
         userName:"",
         mobile:"",
-        email:""
+        email:"",
+        address:""
     };
     const [isAuth,setIsAuth] = useState(false)
     const [data,setData] = useState(initData)

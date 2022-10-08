@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Icon } from "@chakra-ui/react";
 import { RiDeleteBin5Line } from "react-icons/ri";
-import {IoIosArrowDroprightCircle} from 'react-icons/io';
+import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { TbCurrencyRupee } from "react-icons/tb";
 import styles from "../styles/cart.module.css";
 
 const Cart = () => {
@@ -23,42 +24,69 @@ const Cart = () => {
                 Delivery Address
               </p>
               <p className={styles.set_address}>950/13 Aggarwal Mandi Delhi</p>
-              <p className={styles.set_change_address_text}>Change <Icon color="red" marginTop="15px" as={IoIosArrowDroprightCircle}/></p>
+              <p className={styles.set_change_address_text}>
+                Change{" "}
+                <Icon
+                  color="red"
+                  marginTop="15px"
+                  as={IoIosArrowDroprightCircle}
+                />
+              </p>
             </div>
             <div>//delivery address image comes here</div>
           </div>
-          <p style={{fontWeight:"500",paddingLeft:"6px"}}>Order Summary</p>
+          <p style={{ fontWeight: "500", paddingLeft: "6px" }}>Order Summary</p>
           <div className={styles.order_summary_div}>
             <div className={styles.payable_now_div}>
               <h3 className={styles.text_set}>Payable Now</h3>
-              <p style={{fontSize:"16px",fontWeight:"500"}}>
-                Refundable Deposit <span style={{marginLeft:"30%"}}>Amount</span>
-              </p>
-              <p style={{fontSize:"16px",fontWeight:"500"}}>
-                Delivery Charges <span style={{marginLeft:"30%"}}>Amount</span>
-              </p>
+              <div className={styles.pricing_info_div}>
+                <p className={styles.pricing_info_text_set}>
+                  Refundable Deposit
+                </p>
+                <p className={styles.pricing_info_text_set}>
+                  <Icon as={TbCurrencyRupee} />
+                  Amount
+                </p>
+              </div>
+              <div className={styles.pricing_info_div}>
+                <p className={styles.pricing_info_text_set}>Delivery Charges</p>
+                <p className={styles.pricing_info_text_set}>
+                  <Icon as={TbCurrencyRupee} />
+                  Amount
+                </p>
+              </div>
             </div>
             <div className={styles.monthly_payable_div}>
               <h3 className={styles.text_set}>Monthly Payable</h3>
-              <p>
-                Products Rent <span>Amount</span>
-              </p>
-              <p>
-                GST <span>Amount</span>
-              </p>
-              <p>
-                Total Monthly Rent <span>Amount</span>
-              </p>
+              <div className={styles.pricing_info_div}>
+                <p className={styles.pricing_info_text_set}>Products Rent</p>
+                <p className={styles.pricing_info_text_set}>
+                  <Icon as={TbCurrencyRupee} />
+                  Amount
+                </p>
+              </div>
+              <div className={styles.pricing_info_div}>
+                <p className={styles.pricing_info_text_set}>GST</p>
+                <p className={styles.pricing_info_text_set}>Amount</p>
+              </div>
+              <div className={styles.pricing_info_div}>
+                <p className={styles.pricing_info_text_set}>
+                  Total Monthly Rent
+                </p>
+                <p className={styles.pricing_info_text_set}>Amount</p>
+              </div>
             </div>
           </div>
-          <p style={{textAlign:"right",fontSize:"12px",fontWeight:"500",paddingTop:"10px",paddingRight:"10%"}}>Not to be paid now. Pay post usage every month.</p>
-          <button>
-            <div style={{ display: "flex" }}>
-              <div>
-                <p>Amount</p>
-                <p>Payable Now</p>
+          <p className={styles.extra_info_text}>
+            Not to be paid now. Pay post usage every month.
+          </p>
+          <button className={styles.set_payment_btn}>
+            <div style={{ display: "flex",justifyContent:"space-between" }}>
+              <div className={styles.payable_amount_div} >
+                <p className={styles.set_payment_btn_amount_set}><Icon as={TbCurrencyRupee} />Amount</p>
+                <p className={styles.set_payment_btn_payable_now_text_set}>Payable Now</p>
               </div>
-              <div>Proceed</div>
+              <div className={styles.set_payment_btn_proceed_now_text}>Proceed</div>
             </div>
           </button>
         </div>
