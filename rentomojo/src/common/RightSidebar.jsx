@@ -13,6 +13,7 @@ const initData = {
   rent3: "",
   rent6: "",
   refundable: "",
+  quantity:1,
   img: "",
   description: [],
   planPrice: "",
@@ -52,7 +53,7 @@ const RightSidebar = ({ data }) => {
   };
   useEffect(() => {
     if (sliderValue == 3) {
-      setCartData({ ...data, planPrice: data.rent3 });
+      setCartData({ ...data,planPrice: data.rent3 });
     } else {
       setCartData({ ...data, planPrice: data.rent6 });
     }

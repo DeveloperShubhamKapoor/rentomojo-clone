@@ -218,6 +218,7 @@
       "rent3": "1500",
       "rent6": "1300",
       "refundable": "4000",
+      "quantity": 12,
       "description": [
         "Capacity/Size : 6.4",
         "RAM: 8 GB",
@@ -234,6 +235,7 @@
       "title": "OnePlus 7 Pro (Mirror Gray)",
       "rent3": "1000",
       "rent6": "850",
+      "quantity": 13,
       "refundable": "3500",
       "description": [
         "Capacity/Size : 6.67",
