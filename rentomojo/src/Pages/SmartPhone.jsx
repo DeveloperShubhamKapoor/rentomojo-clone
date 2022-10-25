@@ -13,6 +13,7 @@ const initData = {
   rent3: "",
   rent6: "",
   refundable: "",
+  quantity:"",
   img: "",
   description: [],
 };

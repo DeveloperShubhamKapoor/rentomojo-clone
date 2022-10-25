@@ -7,13 +7,51 @@ import styles from "../styles/cart.module.css";
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
-  const [quantity, setQuantity] = useState(1);
-  console.log(cartData);
+  let [quantity, setQuantity] = useState(1);
+  
+  let handleCartQuantityIncrease=(obj)=>{
+    console.log(obj)
+    cartData.filter(function(item){
+      if(item.id === obj.id){
+        setQuantity(quantity+1)
+      }
+    })
+    let data = {...obj,quantity}
+    
+    fetch(`http://localhost:8080/cart/${obj.id}`,{
+      method:"PATCH",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then((res)=>res.json())
+    .then((data)=>console.log(data))
+  }
+
+  let handleCartQuantityDecrease=(obj)=>{
+    console.log(obj)
+    cartData.filter(function(item){
+      if(item.id === obj.id){
+        setQuantity(quantity-1)
+      }
+    })
+    let data = {...obj,quantity}
+    fetch(`http://localhost:8080/cart/${obj.id}`,{
+      method:"PATCH",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then((res)=>res.json())
+    .then((data)=>console.log(data))
+  }
   useEffect(() => {
     fetch("http://localhost:8080/cart")
       .then((res) => res.json())
       .then((res) => setCartData(res));
-  }, []);
+  }, [cartData]);
   return (
     <div className={styles.body}>
       <div className={styles.cart_container_main}>
@@ -67,13 +105,17 @@ const Cart = () => {
               </div>
               <div className={styles.pricing_info_div}>
                 <p className={styles.pricing_info_text_set}>GST</p>
-                <p className={styles.pricing_info_text_set}>Amount</p>
+                <p className={styles.pricing_info_text_set}>
+                <Icon as={TbCurrencyRupee} />
+                  Amount</p>
               </div>
               <div className={styles.pricing_info_div}>
                 <p className={styles.pricing_info_text_set}>
                   Total Monthly Rent
                 </p>
-                <p className={styles.pricing_info_text_set}>Amount</p>
+                <p className={styles.pricing_info_text_set}>
+                <Icon as={TbCurrencyRupee} />
+                  Amount</p>
               </div>
             </div>
           </div>
@@ -97,19 +139,19 @@ const Cart = () => {
                 <div className={styles.set_product_img}>
                   <img src={item.img} alt="" />
                 </div>
-                <div>
+                <div style={{paddingLeft:"5px",padding:"8px"}}>
                   <h4>
                     {item.title}{" "}
                     <span>
                       <Icon as={RiDeleteBin5Line} />
                     </span>
                   </h4>
-                  <div style={{ display: "flex" }}>
-                    <div>
+                  <div style={{ display: "flex",gap:"10px" }}>
+                    <div className={styles.set_rent_refund_div}>
                       <p>Rent</p>
                       <p>{item.planPrice}</p>
                     </div>
-                    <div>
+                    <div className={styles.set_rent_refund_div}>
                       <p>Deposit</p>
                       <p>{item.refundable}</p>
                     </div>
@@ -117,9 +159,9 @@ const Cart = () => {
                 </div>
               </div>
               <div>
-                <button>-</button>
-                {quantity}
-                <button>+</button>
+                <button onClick={()=>handleCartQuantityDecrease(item)}>-</button>
+                {item.quantity}
+                <button onClick={handleCartQuantityIncrease(item)}>+</button>
               </div>
             </div>
           ))}

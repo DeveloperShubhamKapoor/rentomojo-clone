@@ -138,9 +138,10 @@ body {
 .product_container {
   width: 100%;
   background-color: white;
-  border: 1px solid black;
   padding: 10px;
   height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 .set_product_img {
   width: 20%;
@@ -149,4 +150,7 @@ body {
 }
 .title_img_div {
   display: flex;
+}
+.set_rent_refund_div{
+  padding: 7px;
 }
