@@ -24,26 +24,43 @@ const RightSidebar = ({ data }) => {
   const [cartData, setCartData] = useState(initData);
   const [added, setAdded] = useState(false);
   const { sliderValue } = useContext(FilterContext);
-  console.log(sliderValue)
+  const loggedInToken = localStorage.getItem("loggedInToken") 
+  const cartProducts = []
+
   const handleCart = () => {
-    fetch("http://localhost:8080/cart", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(cartData),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log("res", res));
-    toast({
-      title: "One Item added",
-      position: "top",
-      description: data.title,
-      status: "success",
-      duration: 2000,
-      isClosable: true,
-    });
-    setAdded(true);
+    if(!loggedInToken){
+      fetch("http://localhost:8080/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartData),
+      })
+        .then((res) => res.json())
+        .then((res) => console.log("res", res));
+      toast({
+        title: "One Item added",
+        position: "top",
+        description: data.title,
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+      setAdded(true);
+    }
+    else{
+      cartProducts.push(cartData)
+      localStorage.setItem("cart_items_rentomojo",cartProducts)
+      toast({
+        title: "One Item added",
+        position: "top",
+        description: data.title,
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+      setAdded(true);
+    }
   };
   const handleRedirect = () => {
     navigate("/electronics/smartphones");
