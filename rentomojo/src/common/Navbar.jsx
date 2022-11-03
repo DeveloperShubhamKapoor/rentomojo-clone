@@ -11,10 +11,12 @@ import styles from "../styles/homepage.module.css";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import  logo  from "../images/rentomojo.jpeg";
-import { Link } from "react-router-dom";
-import LoginModal from "./LoginModal";
+import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
-  
+  const navigate = useNavigate()
+  const handleLoginSignup=()=>{
+    navigate("/signup")
+  }
   return (
     <div>
       <Box
@@ -40,7 +42,7 @@ const Navbar = () => {
           >
             Cart
           </Button>
-          <LoginModal />
+          <button onClick={handleLoginSignup} className={styles.login_signup_btn}>Login/Signup</button>
         </Flex>
       </Box>
     </div>

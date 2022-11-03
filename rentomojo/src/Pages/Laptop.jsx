@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import Footer from "../common/Footer";
 import Navbar from "../common/Navbar";
+import styles from "../styles/smartphones.module.css";
 import RightSidebar from "../common/RightSidebar";
 import { FilterContext } from "../context/FilterContext";
-import styles from "../styles/smartphones.module.css";
-
 
 const initData = {
   id: "",
@@ -18,14 +17,14 @@ const initData = {
   img: "",
   description: [],
 };
-const SmartDevice = () => {
+const Laptop = () => {
   const params = useParams();
   const [data, setData] = useState(initData);
   const { sliderValue } = useContext(FilterContext);
   const [display, setDisplay] = useState("none");
-  
+
   useEffect(() => {
-    fetch(`http://localhost:5500/electronics/smartdevices/${params.smartdeviceid}`)
+    fetch(`http://localhost:5500/electronics/laptops/${params.laptopid}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -120,4 +119,4 @@ const SmartDevice = () => {
   );
 };
 
-export default SmartDevice;
+export default Laptop;

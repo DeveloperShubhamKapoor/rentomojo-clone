@@ -24,11 +24,11 @@ const RightSidebar = ({ data }) => {
   const [cartData, setCartData] = useState(initData);
   const [added, setAdded] = useState(false);
   const { sliderValue } = useContext(FilterContext);
-  const loggedInToken = localStorage.getItem("loggedInToken") 
+  const loggedInToken = localStorage.getItem("token_rento_mojo") 
   const cartProducts = []
 
   const handleCart = () => {
-    if(!loggedInToken){
+    if(loggedInToken){
       fetch("http://localhost:8080/cart", {
         method: "POST",
         headers: {
@@ -49,17 +49,7 @@ const RightSidebar = ({ data }) => {
       setAdded(true);
     }
     else{
-      cartProducts.push(cartData)
-      localStorage.setItem("cart_items_rentomojo",cartProducts)
-      toast({
-        title: "One Item added",
-        position: "top",
-        description: data.title,
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-      });
-      setAdded(true);
+      
     }
   };
   const handleRedirect = () => {

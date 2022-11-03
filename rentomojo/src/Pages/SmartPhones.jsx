@@ -12,7 +12,7 @@ const SmartPhones = () => {
   const [smartphoneChecked, setSmartphoneChecked] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:8080/smartphones")
+    fetch("http://localhost:5500/electronics/smartphones")
       .then((res) => res.json())
       .then((data) => setSmartphonesData(data));
     setSmartphoneChecked(true);
@@ -22,7 +22,7 @@ const SmartPhones = () => {
       <LeftSidebar/>
       <div className={styles.smartphones_container}>
         {smartphonesData.map((item) => (
-          <Link to={`/electronics/${item.id}`}>
+          <Link to={`/electronics/smartphones/${item.id}`}>
             <div className={styles.smartphones_card} key={item.title}>
               <img 
                 className={styles.smartphone_card_img}

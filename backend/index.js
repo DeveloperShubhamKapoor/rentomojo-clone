@@ -6,6 +6,10 @@ const signupRoute = require('./routes/userRoutes/signup.route')
 const loginRoute = require("./routes/userRoutes/login.route")
 const smartphoneRoute = require("./routes/productRoutes/smartphones.route")
 const authentication = require("./middleware/authentication")
+const smartdevicesRoute = require("./routes/productRoutes/smartdevices.route")
+const laptopsRoute = require("./routes/productRoutes/laptops.route")
+const tabletsRoute = require("./routes/productRoutes/tablet.route")
+const userCartRoute = require("./routes/cartRoutes/userCart.routes")
 
 const app = express()
 
@@ -14,8 +18,12 @@ app.use(express.json())
 app.use(cors())
 app.use("/signup",signupRoute)
 app.use("/login",loginRoute)
-app.use("/smartphones",smartphoneRoute)
+app.use("/electronics/smartphones",smartphoneRoute)
+app.use("/electronics/smartdevices",smartdevicesRoute)
+app.use("/electronics/laptops",laptopsRoute)
+app.use("/electronics/tablets",tabletsRoute)
 app.use(authentication)
+app.use("/cart",userCartRoute)
 
 
 

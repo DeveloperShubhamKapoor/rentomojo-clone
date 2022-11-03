@@ -34,6 +34,10 @@
     color:#e53e3e;
     background-color: white;
 }
+.login_modal_body{
+    background-color: #e53e3e;
+    color: white;
+}
 .footer_container{
     height: auto;
     width:100%;
