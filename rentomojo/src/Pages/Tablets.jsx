@@ -1,4 +1,3 @@
-
 import React, { useContext, useEffect, useState } from "react";
 import styles from "../styles/smartphones.module.css";
 import { TbTruckDelivery } from "react-icons/tb";
@@ -7,21 +6,21 @@ import { Link } from "react-router-dom";
 import { FilterContext } from "../context/FilterContext";
 import LeftSidebar from "../common/LeftSidebar";
 
-const SmartDevices = () => {
-    const [smartdevicesData, setSmartdevicesData] = useState([]);
-    const { sliderValue } = useContext(FilterContext);
-  
-    useEffect(() => {
-      fetch("http://localhost:5500/electronics/smartdevices")
-        .then((res) => res.json())
-        .then((data) => setSmartdevicesData(data));
-    }, []);
-    return (
-      <div>
+const Tablets = () => {
+  const [tabletsData, setTabletsData] = useState([]);
+  const { sliderValue } = useContext(FilterContext);
+
+  useEffect(() => {
+    fetch("http://localhost:5500/electronics/tablets")
+      .then((res) => res.json())
+      .then((data) => setTabletsData(data));
+  }, []);
+  return (
+    <div>
       <LeftSidebar/>
       <div className={styles.smartphones_container}>
-        {smartdevicesData.map((item) => (
-          <Link to={`/electronics/smartdevices/${item.id}`}>
+        {tabletsData.map((item) => (
+          <Link to={`/electronics/tablets/${item.id}`}>
             <div className={styles.smartphones_card} key={item.title}>
               <img 
                 className={styles.smartphone_card_img}
@@ -57,7 +56,7 @@ const SmartDevices = () => {
         ))}
       </div>
     </div>
-    );
-}
+  );
+};
 
-export default SmartDevices
+export default Tablets;

@@ -145,7 +145,7 @@
   ],
   "smart_devices": [
     {
-      "user_id": "Amazon Fire TV Stick",
+      "id": "Amazon Fire TV Stick",
       "title": "Amazon Fire TV Stick",
       "rent3": "120",
       "rent6": "100",
@@ -158,10 +158,10 @@
         "Dolby Audio & 5.1 Surround Sound"
       ],
       "img": "https://p.rmjo.in/moodShot/a0zja0h7-1024x512.jpg",
-      "inStock": false
+      "img_full":"https://p.rmjo.in/moodShot/a0zja0h7-1024x512.jpg"
     },
     {
-      "user_id": "Amazon Echo",
+      "id": "Amazon Echo",
       "title": "Amazon Echo",
       "rent3": "200",
       "rent6": "170",
@@ -174,10 +174,10 @@
         "Dual speakers powered by Dolby"
       ],
       "img": "https://p.rmjo.in/moodShot/ticpw82j-1024x512.jpg",
-      "inStock": false
+      "img_full":"https://p.rmjo.in/moodShot/ticpw82j-1024x512.jpg"
     },
     {
-      "user_id": "boAt AAVANTE",
+      "id": "boAt AAVANTE",
       "title": "boAt AAVANTE",
       "rent3": "200",
       "rent6": "170",
@@ -190,10 +190,10 @@
         "2 Channel - 3D stereo surround sound"
       ],
       "img": "https://p.rmjo.in/moodShot/taz1fga2-1024x512.jpg",
-      "inStock": false
+      "img_full":"https://p.rmjo.in/moodShot/taz1fga2-1024x512.jpg"
     },
     {
-      "user_id": "Google Home",
+      "id": "Google Home",
       "title": "Google Home",
       "rent3": "230",
       "rent6": "180",
@@ -207,9 +207,10 @@
         "Comes with power adapter and cable"
       ],
       "img": "https://p.rmjo.in/moodShot/lzsk3vrh-1024x512.jpg",
-      "inStock": false
+      "img_full":"https://p.rmjo.in/moodShot/lzsk3vrh-1024x512.jpg"
     }
   ],
+  
   "cart": [
     {
       "id": "Samsung Galaxy S10+ (Black)",
@@ -251,31 +252,34 @@
   "furniture": {
     "bedroom": [
       {
+        "id":"Queen Foam Mattress (6x5)",
         "title": "Queen Foam Mattress (6x5)",
+        "img_full":"https://p.rmjo.in/moodShot/cx9p2nbh-1024x512.jpg",
         "rent3": "259",
         "rent6": "200",
         "refundable": "400",
         "description": "Foam filling for support",
-        "img": "https://p.rmjo.in/moodShot/cx9p2nbh-1024x512.jpg",
-        "inStock": true
+        "img": "https://p.rmjo.in/moodShot/cx9p2nbh-1024x512.jpg"
       },
       {
+        "id":"Single XL Coir & Foam Mattress (6.6x3)",
         "title": "Single XL Coir & Foam Mattress (6.6x3)",
+        "img_full":"https://p.rmjo.in/moodShot/bn00ievi-1024x512.jpg",
         "rent3": "189",
         "rent6": "150",
         "refundable": "300",
         "description": "Coir & Foam filling for support",
-        "img": "https://p.rmjo.in/moodShot/j4fscs12-1024x512.jpg",
-        "inStock": true
+        "img": "https://p.rmjo.in/moodShot/j4fscs12-1024x512.jpg"
       },
       {
+        "id":"Napster Metal Queen Bed (6x5)",
         "title": "Napster Metal Queen Bed (6x5)",
+        "img_full":"https://p.rmjo.in/moodShot/yhykhfe8-1024x512.jpg",
         "rent3": "300",
         "rent6": "250",
         "refundable": "500",
         "description": "Lightweight and rust-free",
-        "img": "https://p.rmjo.in/moodShot/6wkxqfzq-1024x512.jpg",
-        "inStock": true
+        "img": "https://p.rmjo.in/moodShot/6wkxqfzq-1024x512.jpg"
       }
     ]
   }

@@ -8,6 +8,7 @@ import styles from "../styles/cart.module.css";
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
   let [quantity, setQuantity] = useState(1);
+  const token = localStorage.getItem("token_rento_mojo")
   
   let handleCartQuantityIncrease=(obj)=>{
     console.log(obj)

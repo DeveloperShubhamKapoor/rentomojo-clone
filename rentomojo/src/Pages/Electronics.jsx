@@ -7,14 +7,10 @@ import styles from "../styles/electronics.module.css";
 
 const Electronics = () => {
   const navigate = useNavigate();
-   const {filterObjects,setFilterObjects} = useContext(FilterContext)
   // console.log(filterObjects)
   const handleOnClick = (e) => {
     const { name } = e.target;
-    setFilterObjects({
-      ...filterObjects,
-        
-    })
+    
     navigate(`/electronics/${name}`);
   };
   return (
@@ -38,7 +34,7 @@ const Electronics = () => {
         <div className={styles.card_container}>
           <div onClick={handleOnClick} className={styles.category_card}>
             <img
-              name="smart_devices"
+              name="smartdevices"
               className={styles.category_card_img}
               src="https://www.rentomojo.com/public/images/category/appliances-bg/smart-devices-v1_new.jpg"
             />

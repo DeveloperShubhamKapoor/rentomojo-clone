@@ -24,7 +24,7 @@ const SmartPhone = () => {
   const [display, setDisplay] = useState("none");
 
   useEffect(() => {
-    fetch(`http://localhost:8080/smartphones/${params.smartphoneid}`)
+    fetch(`http://localhost:5500/electronics/smartphones/${params.smartphoneid}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
