@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -12,10 +12,19 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import  logo  from "../images/rentomojo.jpeg";
 import { Link, useNavigate } from "react-router-dom";
+import { Tooltip } from '@chakra-ui/react'
 const Navbar = () => {
   const navigate = useNavigate()
+  const [token,setToken] = useState(localStorage.getItem("token_rento_mojo"))
+  const userEmail = localStorage.getItem("userEmail")
   const handleLoginSignup=()=>{
     navigate("/signup")
+  }
+  const handleSignout=()=>{
+    console.log("in")
+    setToken(null)
+    localStorage.removeItem("token_rento_mojo")
+    localStorage.removeItem("userEmail")
   }
   return (
     <div>
@@ -42,7 +51,14 @@ const Navbar = () => {
           >
             Cart
           </Button>
-          <button onClick={handleLoginSignup} className={styles.login_signup_btn}>Login/Signup</button>
+          {token ? 
+          <Tooltip onClick={handleSignout} hasArrow label="Sign Out" bg='red.600'>
+            <div className={styles.user_login_info}>
+              <p className={styles.user_name_first_letter}>{userEmail[1]}</p>
+            </div>
+          </Tooltip>
+          :<button onClick={handleLoginSignup} className={styles.login_signup_btn}>Login/Signup</button>}
+          
         </Flex>
       </Box>
     </div>

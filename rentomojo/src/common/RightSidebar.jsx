@@ -22,34 +22,57 @@ const RightSidebar = ({ data }) => {
   const toast = useToast();
   const navigate = useNavigate();
   const [cartData, setCartData] = useState(initData);
+  const [res,setRes] = useState({})
   const [added, setAdded] = useState(false);
   const { sliderValue } = useContext(FilterContext);
-  const loggedInToken = localStorage.getItem("token_rento_mojo") 
-  const cartProducts = []
-
+  //console.log(data)
+  //console.log(sliderValue)
+  const loggedInToken = JSON.parse(localStorage.getItem("token_rento_mojo"))
   const handleCart = () => {
     if(loggedInToken){
-      fetch("http://localhost:8080/cart", {
+      fetch("http://localhost:5500/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          token:loggedInToken
         },
-        body: JSON.stringify(cartData),
+        body: JSON.stringify(cartData)
       })
         .then((res) => res.json())
-        .then((res) => console.log("res", res));
-      toast({
-        title: "One Item added",
-        position: "top",
-        description: data.title,
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-      });
-      setAdded(true);
+        .then((res) => setRes(res))
+        .then(()=>{
+          if(res.authorized==false){
+            toast({
+              title: "Session Expired! Login Again",
+              position: "top",
+              status: "error",
+              duration: 2000,
+              isClosable: true,
+            })
+            navigate("/login")
+        }
+        else{
+          toast({
+            title: "One Item added",
+            position: "top",
+            description: data.title,
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+          });
+          setAdded(true)
+          console.log(res);
+        }
+      }) 
     }
     else{
-      
+      toast({
+        title: "User is not Logged In",
+        status: "error",
+        position:"bottom-right",
+        duration: 4000,
+        isClosable: true,
+      });
     }
   };
   const handleRedirect = () => {
@@ -59,16 +82,18 @@ const RightSidebar = ({ data }) => {
     navigate("/cart");
   };
   useEffect(() => {
-    if (sliderValue == 3) {
+    if(sliderValue==3){
       setCartData({ ...data,planPrice: data.rent3 });
-    } else {
+      console.log("cartdata3", cartData);
+    }
+    if (sliderValue == 6) {
       setCartData({ ...data, planPrice: data.rent6 });
+      console.log("cartData6",cartData)
     }
     // sliderValue == 3
     // ? setCartData({ ...data, planPrice: data.rent3 })
     // : setCartData({ ...data, planPrice: data.rent6 });
-  }, [sliderValue]);
-  console.log("cartdata", cartData);
+  }, [sliderValue,data]);
 
   return (
     <div className={styles.price_info_container}>
