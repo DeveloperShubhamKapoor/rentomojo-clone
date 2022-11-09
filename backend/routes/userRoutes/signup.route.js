@@ -9,6 +9,27 @@ signupRoute.post("/",async(req,res)=>{
     if(!email.includes(".com")&& !email.includes(".in") && !email.includes(".org") && !email.includes(".net")){
         return res.send({msg:"Top level domain should be .com or .in  or .net or .org ",signupSuccess:false})
     }
+    else if(!email.includes("@")){
+        return res.send({msg:"Email should contain @",signupSuccess:false})
+    }
+    else if(email[0]=="."){
+        return res.send({msg:"Invalid format",signupSuccess:false})
+        
+    }
+    else if(email.includes("@")&& email[0]=="@"){
+        return res.send({msg:"Invalid format",signupSuccess:false})   
+    }
+    else if(email.includes("@.")){
+        return res.send({msg:"Invalid format",signupSuccess:false})
+
+    }
+    else if(email.includes("!")||email.includes("#")||email.includes("$")||email.includes("%")||email.includes("&")||email.includes("*")||email.includes("(")||email.includes(")")){
+        return res.send({msg:"Invalid format",signupSuccess:false})
+        
+    }
+    else if(email.includes("..")){
+        return res.send({msg:"Invalid format",signupSuccess:false})
+    }
     const isPresent  = await signupModel.findOne({email})
     if(isPresent){
         return res.send({msg:"Email already exist",signupSuccess:false})

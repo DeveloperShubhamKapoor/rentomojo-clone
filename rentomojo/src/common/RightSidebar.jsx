@@ -25,8 +25,8 @@ const RightSidebar = ({ data }) => {
   const [res,setRes] = useState({})
   const [added, setAdded] = useState(false);
   const { sliderValue } = useContext(FilterContext);
-  //console.log(data)
-  //console.log(sliderValue)
+  
+  console.log(res)
   const loggedInToken = JSON.parse(localStorage.getItem("token_rento_mojo"))
   const handleCart = () => {
     if(loggedInToken){
@@ -40,31 +40,7 @@ const RightSidebar = ({ data }) => {
       })
         .then((res) => res.json())
         .then((res) => setRes(res))
-        .then(()=>{
-          if(res.authorized==false){
-            toast({
-              title: "Session Expired! Login Again",
-              position: "top",
-              status: "error",
-              duration: 2000,
-              isClosable: true,
-            })
-            navigate("/login")
-        }
-        else{
-          toast({
-            title: "One Item added",
-            position: "top",
-            description: data.title,
-            status: "success",
-            duration: 2000,
-            isClosable: true,
-          });
-          setAdded(true)
-          console.log(res);
-        }
-      }) 
-    }
+    } 
     else{
       toast({
         title: "User is not Logged In",
@@ -81,6 +57,30 @@ const RightSidebar = ({ data }) => {
   const handleRedirectCart = () => {
     navigate("/cart");
   };
+    useEffect(()=>{
+    if(res.authorized==false){
+      toast({
+        title: "Session Expired! Login Again",
+        position: "top",
+        status: "error",
+        duration: 2000,
+        isClosable: true,
+      })
+      navigate("/login")
+    }
+    if(res.data){
+      toast({
+        title: "One Item added",
+        position: "top",
+        description: data.title,
+        status: "success",
+        duration: 2000,
+        isClosable: true,
+      });
+      setAdded(true)
+      console.log(res);
+    }  
+  },[res])
   useEffect(() => {
     if(sliderValue==3){
       setCartData({ ...data,planPrice: data.rent3 });
@@ -89,12 +89,8 @@ const RightSidebar = ({ data }) => {
     if (sliderValue == 6) {
       setCartData({ ...data, planPrice: data.rent6 });
       console.log("cartData6",cartData)
-    }
-    // sliderValue == 3
-    // ? setCartData({ ...data, planPrice: data.rent3 })
-    // : setCartData({ ...data, planPrice: data.rent6 });
+    }  
   }, [sliderValue,data]);
-
   return (
     <div className={styles.price_info_container}>
       <div>

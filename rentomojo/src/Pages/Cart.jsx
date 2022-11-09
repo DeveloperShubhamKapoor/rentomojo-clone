@@ -7,41 +7,51 @@ import styles from "../styles/cart.module.css";
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
-  let [quantity, setQuantity] = useState(1);
-  const token = localStorage.getItem("token_rento_mojo")
+  console.log(cartData)
+  const token = JSON.parse(localStorage.getItem("token_rento_mojo"))
   
-  let handleCartQuantityIncrease=(obj)=>{
-    console.log(obj)
+  const handleCartQuantityIncrease=(obj)=>{
     cartData.filter(function(item){
       if(item.id === obj.id){
-        setQuantity(quantity+1)
+        obj.quantity = obj.quantity+1
+        obj.planPrice == obj.rent3 ? obj.planPrice = obj.rent3*obj.quantity :obj.planPrice = obj.rent6*obj.quantity
+        obj.refundable = obj.refundable
       }
     })
-    let data = {...obj,quantity}
-    
-    fetch(`http://localhost:8080/cart/${obj.id}`,{
-      method:"PATCH",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body: JSON.stringify(data)
-    })
-    .then((res)=>res.json())
-    .then((data)=>console.log(data))
+    let data = obj
+    patchData(obj,data)
+    fetchData()
   }
 
-  let handleCartQuantityDecrease=(obj)=>{
-    console.log(obj)
+  const handleCartQuantityDecrease=(obj)=>{
     cartData.filter(function(item){
       if(item.id === obj.id){
-        setQuantity(quantity-1)
+        obj.quantity = obj.quantity-1
+        obj.planPrice == obj.rent3 ? obj.planPrice = obj.rent3*obj.quantity :obj.planPrice = obj.rent6*obj.quantity
+        obj.refundable = obj.refundable*obj.quantity
       }
     })
-    let data = {...obj,quantity}
-    fetch(`http://localhost:8080/cart/${obj.id}`,{
+    let data = obj
+    patchData(obj,data)
+    fetchData()
+  }
+  const fetchData=()=>{
+    fetch("http://localhost:5500/cart",{
+      method:"GET",
+      headers:{
+        "Content-Type":"application/json",
+        token:token
+      }
+    })
+      .then((res) => res.json())
+      .then((res) => setCartData(res.data));
+  }
+  const patchData=(obj,data)=>{
+    fetch(`http://localhost:5500/cart/${obj.id}`,{
       method:"PATCH",
       headers:{
-        "Content-Type":"application/json"
+        "Content-Type":"application/json",
+        token:token
       },
       body: JSON.stringify(data)
     })
@@ -49,10 +59,8 @@ const Cart = () => {
     .then((data)=>console.log(data))
   }
   useEffect(() => {
-    fetch("http://localhost:8080/cart")
-      .then((res) => res.json())
-      .then((res) => setCartData(res));
-  }, [cartData]);
+    fetchData()
+  }, []);
   return (
     <div className={styles.body}>
       <div className={styles.cart_container_main}>
@@ -162,7 +170,7 @@ const Cart = () => {
               <div>
                 <button onClick={()=>handleCartQuantityDecrease(item)}>-</button>
                 {item.quantity}
-                <button onClick={handleCartQuantityIncrease(item)}>+</button>
+                <button onClick={()=>handleCartQuantityIncrease(item)}>+</button>
               </div>
             </div>
           ))}

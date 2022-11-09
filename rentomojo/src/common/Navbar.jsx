@@ -49,7 +49,7 @@ const Navbar = () => {
             colorScheme="black"
             variant="ghost"
           >
-            Cart
+           <Link to="/cart">Cart</Link> 
           </Button>
           {token ? 
           <Tooltip onClick={handleSignout} hasArrow label="Sign Out" bg='red.600'>
