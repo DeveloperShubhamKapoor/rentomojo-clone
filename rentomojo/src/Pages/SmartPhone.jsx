@@ -13,7 +13,7 @@ const initData = {
   rent3: "",
   rent6: "",
   refundable: "",
-  quantity:"",
+  quantity:1,
   img: "",
   description: [],
 };
@@ -26,7 +26,7 @@ const SmartPhone = () => {
   useEffect(() => {
     fetch(`http://localhost:5500/electronics/smartphones/${params.smartphoneid}`)
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((res) => setData({...data,...res}));
   }, []);
   return (
     <div>
