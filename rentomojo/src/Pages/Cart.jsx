@@ -4,10 +4,12 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { TbCurrencyRupee } from "react-icons/tb";
 import styles from "../styles/cart.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
   console.log(cartData)
+  const navigate = useNavigate()
   const token = JSON.parse(localStorage.getItem("token_rento_mojo"))
   
   const handleCartQuantityIncrease=(obj)=>{
@@ -36,15 +38,22 @@ const Cart = () => {
     fetchData()
   }
   const fetchData=()=>{
-    fetch("http://localhost:5500/cart",{
-      method:"GET",
-      headers:{
-        "Content-Type":"application/json",
-        token:token
-      }
-    })
-      .then((res) => res.json())
-      .then((res) => setCartData(res.data));
+    if(!token){
+      
+    }
+    else{
+      fetch("http://localhost:5500/cart",{
+        method:"GET",
+        headers:{
+          "Content-Type":"application/json",
+          token:token
+        }
+      })
+        .then((res) => res.json())
+        .then((res) => setCartData(res.data))
+        .catch((err)=>console.log(err))
+    }
+    
   }
   const patchData=(obj,data)=>{
     fetch(`http://localhost:5500/cart/${obj.id}`,{

@@ -9,6 +9,30 @@ require("dotenv").config()
 loginRoute.post("/",async(req,res)=>{
     const {email,password} = req.body
     const isPresent = await signupModel.findOne({email})
+    if(!email.includes(".com")&& !email.includes(".in") && !email.includes(".org") && !email.includes(".net")){
+        return res.send({msg:"Top level domain should be .com or .in  or .net or .org ",login:false,token:""})
+    }
+    else if(!email.includes("@")){
+        return res.send({msg:"Email should contain @",login:false,token:""})
+    }
+    else if(email[0]=="."){
+        return res.send({msg:"First character should not be '.' ",login:false,token:""})
+        
+    }
+    else if(email.includes("@")&& email[0]=="@"){
+        return res.send({msg:"First character should not be '@' ",login:false,token:""})   
+    }
+    else if(email.includes("@.")){
+        return res.send({msg:"Invalid format",login:false,token:""})
+
+    }
+    else if(email.includes("!")||email.includes("#")||email.includes("$")||email.includes("%")||email.includes("&")||email.includes("*")||email.includes("(")||email.includes(")")){
+        return res.send({msg:"Invalid format",login:false,token:""})
+        
+    }
+    else if(email.includes("..")){
+        return res.send({msg:"Invalid format",login:false,token:""})
+    }
     if(isPresent){
         let hashedPassword = isPresent.password
         bcrypt.compare(password,hashedPassword).then(function(result){
