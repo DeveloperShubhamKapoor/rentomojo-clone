@@ -1,9 +1,10 @@
 
-import { useEffect, useState } from 'react'
-import styles from '../styles/login_signup.module.css'
-import Navbar from './Navbar'
-import logo from '../images/rentomojo_cat_login.jpeg'
-import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import styles from '../styles/login_signup.module.css';
+import { useToast } from '@chakra-ui/react';
+import Navbar from './Navbar';
+import logo from '../images/rentomojo_cat_login.jpeg';
+import { useNavigate } from 'react-router-dom';
 
 const initInfo={
   email:"",
@@ -16,6 +17,8 @@ const initData={
 export const Signup=()=>{
   const [userSignup,setUserSignup] = useState(initInfo)
   const [isSignupSuccess,setIsSignupSuccess] = useState(initData)
+  const toast = useToast()
+  const id = 'test-toast'
   const navigate=useNavigate()
 
   const handleOnChange=(e)=>{
@@ -27,22 +30,63 @@ export const Signup=()=>{
   }
 
   const handleOnClick=()=>{
-    fetch("http://localhost:5500/signup",{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify(userSignup)
-    })
-    .then((res)=> res.json())
-    .then((data)=>setIsSignupSuccess(data))
+    if(userSignup.email==""|| userSignup.password==""){
+      if (!toast.isActive(id)) {
+        toast({
+          id,
+          size:"80px",
+          title: "Enter Complete Credentials",
+          status: "error",
+          position:"top",
+          duration: 4000,
+          isClosable: true,
+        })
+      }
+    }
+    else{
+      fetch("http://localhost:5500/signup",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify(userSignup)
+      })
+      .then((res)=> res.json())
+      .then((data)=>setIsSignupSuccess(data))
+    }
   }
   useEffect(()=>{
+
+    if(isSignupSuccess.msg!="" && isSignupSuccess.signupSuccess==false){
+      if (!toast.isActive(id)) {
+        toast({
+          id,
+          title: isSignupSuccess.msg,
+          status: "error",
+          position:"top",
+          width:"40%",
+          duration: 4000,
+          isClosable: true,
+        })
+      }
+    }
     if(isSignupSuccess.signupSuccess== true){
+      if (!toast.isActive(id)) {
+        toast({
+          id,
+          title: "Signup Successfull",
+          status: "success",
+          position:"top",
+          width:"40%",
+          duration: 4000,
+          isClosable: true,
+        })
+      }
       navigate("/login")
     }
+
     
-  })
+  },[isSignupSuccess])
   return (
     <div>
       <Navbar/>

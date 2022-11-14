@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
-import styles from '../styles/login_signup.module.css'
-import Navbar from './Navbar'
-import logo from '../images/rentomojo_cat_login.jpeg'
-import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import styles from '../styles/login_signup.module.css';
+import Navbar from './Navbar';
+import logo from '../images/rentomojo_cat_login.jpeg';
+import { useToast } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 const initInfo ={
   email:"",
   password:""
@@ -15,6 +16,8 @@ const initLogin={
 export const Login=()=>{
   const [userLogin,setUserLogin] = useState(initInfo)
   const [isLoginSuccess,setIsLoginSuccess] = useState(initLogin)
+  const toast = useToast()
+  const id = 'test-toast'
   const navigate = useNavigate()
   const handleChange=(e)=>{
     const {name,value} = e.target
@@ -24,7 +27,20 @@ export const Login=()=>{
     })
   }
   const handleLogin=()=>{
-    fetch("http://localhost:5500/login",{
+    if(userLogin.email==""|| userLogin.password==""){
+      if (!toast.isActive(id)) {
+        toast({
+          id,
+          title: "Enter Complete Credentials",
+          status: "error",
+          position:"top",
+          duration: 4000,
+          isClosable: true,
+        })
+      }
+    }
+    else{
+      fetch("http://localhost:5500/login",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -33,11 +49,35 @@ export const Login=()=>{
     })
     .then((res)=> res.json())
     .then((data)=>setIsLoginSuccess(data))
+    }
   }
   useEffect(()=>{
+    if(isLoginSuccess.msg!="" && isLoginSuccess.login==false){
+      if (!toast.isActive(id)) {
+        toast({
+          id,
+          title: isLoginSuccess.msg,
+          status: "error",
+          position:"top",
+          width:"40%",
+          duration: 4000,
+          isClosable: true,
+        })
+      }
+    }
     if(isLoginSuccess.login){
       localStorage.setItem("token_rento_mojo",JSON.stringify(isLoginSuccess.token))
       localStorage.setItem("userEmail",JSON.stringify(userLogin.email))
+      if (!toast.isActive(id)) {
+        toast({
+          id,
+          title: "Login Successfull",
+          status: "success",
+          position:"top",
+          duration: 4000,
+          isClosable: true,
+        })
+      }
       navigate("/")
     }
 
