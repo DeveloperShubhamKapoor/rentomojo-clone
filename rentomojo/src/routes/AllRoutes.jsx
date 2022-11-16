@@ -6,6 +6,7 @@ import { Signup } from '../common/Signup'
 import { OtpModal } from '../components/OtpModal'
 import Cart from '../Pages/Cart'
 import Electronics from '../Pages/Electronics'
+import { EmptyCart } from '../Pages/EmptyCart'
 import Homepage from '../Pages/Homepage'
 import Laptop from '../Pages/Laptop'
 import Laptops from '../Pages/Laptops'
@@ -33,9 +34,6 @@ const AllRoutes = () => {
             <Route path="/electronics/laptops/:laptopid" element={<Laptop/>}/>
             <Route path="/electronics/tablets" element={<Tablets/>}/>
             <Route path="/electronics/tablets/:tabletid" element={<Tablet/>}/>
-
-
-
         </Routes>
     </div>
   )

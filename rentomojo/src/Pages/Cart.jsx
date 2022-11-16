@@ -4,13 +4,15 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { TbCurrencyRupee } from "react-icons/tb";
 import styles from "../styles/cart.module.css";
+import Navbar from "../common/Navbar";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
-  console.log(cartData)
   const navigate = useNavigate()
-  const token = JSON.parse(localStorage.getItem("token_rento_mojo"))
+  //console.log(cartData)
+  const [token,setToken] = useState(JSON.parse(localStorage.getItem("token_rento_mojo")))
+  //console.log("token",token)
   
   const handleCartQuantityIncrease=(obj)=>{
     cartData.filter(function(item){
@@ -39,9 +41,8 @@ const Cart = () => {
   }
   const fetchData=()=>{
     if(!token){
-      
+      return navigate("/")
     }
-    else{
       fetch("http://localhost:5500/cart",{
         method:"GET",
         headers:{
@@ -52,8 +53,6 @@ const Cart = () => {
         .then((res) => res.json())
         .then((res) => setCartData(res.data))
         .catch((err)=>console.log(err))
-    }
-    
   }
   const patchData=(obj,data)=>{
     fetch(`http://localhost:5500/cart/${obj.id}`,{
@@ -69,9 +68,24 @@ const Cart = () => {
   }
   useEffect(() => {
     fetchData()
-  }, []);
+  }, [token]);
   return (
+    <>
+    <Navbar/>
     <div className={styles.body}>
+      {cartData.length==0 ? 
+        <div className={styles.empty_cart_container}>
+          <div>
+              <img className={styles.empty_cart_image} src="https://www.rentomojo.com/public/images/error/no-cart.png" alt="" />
+          </div>
+          <div className={styles.empyt_cart_info}>
+              <h3>No items in cart</h3>
+              <p>Add a few items to your cart and come back here for an
+                  express checkout process!</p>
+              <button onClick={()=>navigate("/electronics")}>Browse Catalogue</button>
+          </div>
+      </div>
+      :
       <div className={styles.cart_container_main}>
         <div className={styles.order_summary_container}>
           <div className={styles.delivery_address_container}>
@@ -185,7 +199,9 @@ const Cart = () => {
           ))}
         </div>
       </div>
+      }
     </div>
+    </>
   );
 };
 

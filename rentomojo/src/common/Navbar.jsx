@@ -24,7 +24,6 @@ const Navbar = () => {
     navigate("/signup")
   }
   const handleSignout=()=>{
-    console.log("in")
     setToken(null)
     localStorage.removeItem("token_rento_mojo")
     localStorage.removeItem("userEmail")
