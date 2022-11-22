@@ -1,5 +1,5 @@
 import { Button, Icon } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from './Navbar'
 import { FiFilter } from "react-icons/fi";
 import SliderComp from "../common/SliderComp"
@@ -15,9 +15,14 @@ import {
     PopoverAnchor,
   } from "@chakra-ui/react";
   import styles from "../styles/smartphones.module.css";
+import { FilterContext } from '../context/FilterContext';
+import { FaLastfmSquare } from 'react-icons/fa';
 
 const LeftSidebar = () => {
     const data = ["Smartphones", "Smart Devices", "Laptop", "Tablets"];
+    const {category} = useContext(FilterContext);
+    const [checked,setIsChecked] = useState(false)
+    console.log(category)
   return (
     <div>
         <Navbar />
@@ -69,7 +74,7 @@ const LeftSidebar = () => {
           <h4>PRODUCT TYPE</h4>
           {data.map((item) => (
             <div className={styles.product_type_set}>
-              <input type="checkbox" />
+              { item.trim().replace(" ","").toLowerCase()== category?<input type="checkbox" checked={true} />:<input type="checkbox" checked={false}/>}
               <p className={styles.product_set}>{item}</p>
             </div>
           ))}

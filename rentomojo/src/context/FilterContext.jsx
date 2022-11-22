@@ -4,5 +4,6 @@ export const FilterContext = createContext();
 
 export function FilterContextProvider({ children }) {
     const [sliderValue, setSliderValue] = useState(3);
-  return <FilterContext.Provider value={{sliderValue,setSliderValue}}>{children}</FilterContext.Provider>;
+    const [category,setCategory] = useState("");
+  return <FilterContext.Provider value={{sliderValue,setSliderValue,category,setCategory}}>{children}</FilterContext.Provider>;
 }

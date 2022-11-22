@@ -9,7 +9,8 @@ import LeftSidebar from "../common/LeftSidebar";
 
 const SmartDevices = () => {
     const [smartdevicesData, setSmartdevicesData] = useState([]);
-    const { sliderValue } = useContext(FilterContext);
+    const { sliderValue,category } = useContext(FilterContext);
+
   
     useEffect(() => {
       fetch("http://localhost:5500/electronics/smartdevices")
