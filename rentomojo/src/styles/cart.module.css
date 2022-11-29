@@ -194,3 +194,9 @@ body {
   margin-top: 20px;
   margin-left: 30%;
 }
+.btn_increase_decrease{
+  padding-left:9px;
+  padding-right: 9px;
+  cursor: pointer;
+  font-size: 23px;
+}

@@ -37,7 +37,7 @@ loginRoute.post("/",async(req,res)=>{
         let hashedPassword = isPresent.password
         bcrypt.compare(password,hashedPassword).then(function(result){
             if(result){
-                let token = jwt.sign({email:email},process.env.secretKey,{expiresIn:"2h"})
+                let token = jwt.sign({email:email},process.env.secretKey)
                 res.send({msg:"Login Successfull",token:token,login:true})
             }
             else{

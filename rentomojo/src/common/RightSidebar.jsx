@@ -13,6 +13,8 @@ const initData = {
   rent3: "",
   rent6: "",
   refundable: "",
+  refundableTotal:"",
+  totalAmount:"",
   quantity:1,
   img: "",
   description: [],
@@ -86,13 +88,15 @@ const RightSidebar = ({ data }) => {
     if(sliderValue==3){
       setCartData({ id:data.id,title:data.title,img_full:data.img_full,
         rent3:data.rent3,rent6:data.rent6,refundable:data.refundable,
-        quantity:data.quantity,img:data.img ,description:data.description
+        refundableTotal:data.refundable,quantity:data.quantity,totalAmount:data.rent3
+        ,img:data.img ,description:data.description
         ,planPrice: data.rent3 });
       
     }
     if (sliderValue == 6) {
       setCartData({ id:data.id,title:data.title,img_full:data.img_full,
         rent3:data.rent3,rent6:data.rent6,refundable:data.refundable,
+        refundableTotal:data.refundable,totalAmount:data.rent6,
         quantity:data.quantity,img:data.img ,description:data.description
         ,planPrice: data.rent6 });
       
