@@ -154,3 +154,49 @@ body {
 .set_rent_refund_div{
   padding: 7px;
 }
+
+.empty_cart_container{
+  width: 90%;
+  height: 580px;
+  margin: auto;
+
+}
+.empty_cart_image{
+  width: 20%;
+  margin: auto;
+  padding-top: 60px;
+}
+.empyt_cart_info{
+  width: 35%;
+  margin: auto;
+  padding:5px;
+}
+.empyt_cart_info>h3{
+  font-size: 29px ;
+  font-weight: 600;
+  text-align: center;
+  padding: 5px;
+}
+.empyt_cart_info>p{
+  font-size: 15px;
+  padding: 4px;
+  text-align: center;
+  line-height: 20px;
+  color: #71757a;
+}
+.empyt_cart_info>button{
+  padding: 10px;
+  background-color: #dc3226;
+  color: white;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 30%;
+}
+.btn_increase_decrease{
+  padding-left:9px;
+  padding-right: 9px;
+  cursor: pointer;
+  font-size: 23px;
+}

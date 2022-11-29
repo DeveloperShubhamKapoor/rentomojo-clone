@@ -7,10 +7,11 @@ import styles from "../styles/electronics.module.css";
 
 const Electronics = () => {
   const navigate = useNavigate();
+  const {setCategory} = useContext(FilterContext);
   // console.log(filterObjects)
   const handleOnClick = (e) => {
     const { name } = e.target;
-    
+    setCategory(name)
     navigate(`/electronics/${name}`);
   };
   return (

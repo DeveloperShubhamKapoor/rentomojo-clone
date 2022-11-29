@@ -9,6 +9,8 @@ const userCartSchema = new mongoose.Schema({
     rent3:{type:String,required:true},
     rent6:{type:String,required:true},
     refundable:{type:String,required:true},
+    refundableTotal:{type:String,required:true},
+    totalAmount:{type:String,required:true},
     quantity:{type:Number,required:true},
     planPrice:{type:String,required:true},
     description:{type:Array}

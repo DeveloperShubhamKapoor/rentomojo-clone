@@ -33,9 +33,6 @@ const AllRoutes = () => {
             <Route path="/electronics/laptops/:laptopid" element={<Laptop/>}/>
             <Route path="/electronics/tablets" element={<Tablets/>}/>
             <Route path="/electronics/tablets/:tabletid" element={<Tablet/>}/>
-
-
-
         </Routes>
     </div>
   )
