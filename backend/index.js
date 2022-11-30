@@ -12,10 +12,13 @@ const tabletsRoute = require("./routes/productRoutes/tablet.route")
 const userCartRoute = require("./routes/cartRoutes/userCart.routes")
 
 const app = express()
-
+let port = process.env.PORT || 5500
 
 app.use(express.json())
 app.use(cors())
+app.get("/",(req,res)=>{
+    res.send({message:"Welcome to Rentomojo"})
+})
 app.use("/signup",signupRoute)
 app.use("/login",loginRoute)
 app.use("/electronics/smartphones",smartphoneRoute)
@@ -27,7 +30,7 @@ app.use("/cart",userCartRoute)
 
 
 
-app.listen(5500,async()=>{
+app.listen(port,async()=>{
     try{
         await mongoose.connect(process.env.server)
         console.log("server started at port 5500")
