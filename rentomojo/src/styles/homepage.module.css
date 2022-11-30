@@ -17,6 +17,7 @@
 .image_set{
     width: 100%;
     border-radius: 20px;
+    cursor: pointer;
 }
 .login_signup_btn{
     color:white;
@@ -121,6 +122,10 @@
     border: 1px solid #e2eaf0;
     border-radius: 10px;
     transition: .25s ease-out;
+    cursor: not-allowed;
+}
+.categories_card:nth-child(1){
+    cursor: pointer;
 }
 .categories_card:hover{
     box-shadow: 0 8px 14px 0 #bfcfdc;

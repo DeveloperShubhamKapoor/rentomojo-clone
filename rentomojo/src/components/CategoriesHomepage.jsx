@@ -17,6 +17,10 @@ const CategoriesHomepage = () => {
   return (
     <div>
         <div className={styles.categories_container}>
+            <div onClick={handleRoute} className={styles.categories_card}>
+              <Icon color={"#4ddfd2"} w={9} h={9} marginLeft={"35%"} marginTop={"13%"} as={AiOutlineMobile}/>
+                <p style={{fontSize:"14px",marginLeft:"25%",marginTop:"2%"}}>Electronics</p>
+            </div>
             <div className={styles.categories_card}>
               <Icon color={"#4ddfd2"} w={9} h={9} marginLeft={"35%"} marginTop={"13%"} as={GoPackage}/>
               <p style={{fontSize:"14px",marginLeft:"27%",marginTop:"2%"}}>Packages</p>
@@ -25,12 +29,6 @@ const CategoriesHomepage = () => {
               <Icon color={"#4ddfd2"} w={9} h={9} marginLeft={"35%"} marginTop={"13%"} as={MdOutlineKingBed} />
               <p style={{fontSize:"14px",marginLeft:"28%",marginTop:"2%"}}>Furniture</p>
             </div>
-            {/* <Link to="/electronics"> */}
-              <div onClick={handleRoute} className={styles.categories_card}>
-              <Icon color={"#4ddfd2"} w={9} h={9} marginLeft={"35%"} marginTop={"13%"} as={AiOutlineMobile}/>
-                <p style={{fontSize:"14px",marginLeft:"25%",marginTop:"2%"}}>Electronics</p>
-              </div>
-            {/* </Link> */}
             <div className={styles.categories_card}>
             <Icon color={"#4ddfd2"} w={9} h={9} marginLeft={"35%"} marginTop={"13%"} as={GiWashingMachine}/>
               <p style={{fontSize:"14px",marginLeft:"25%",marginTop:"2%"}}>Appliances</p>
@@ -43,7 +41,6 @@ const CategoriesHomepage = () => {
             <Icon color={"#4ddfd2"} w={9} h={9} marginLeft={"35%"} marginTop={"13%"} as={TbArmchair}/>
               <p style={{fontSize:"14px",marginLeft:"18%",marginTop:"2%"}}>WFH Essentials</p>
             </div>
-
         </div>
     </div>
   )
