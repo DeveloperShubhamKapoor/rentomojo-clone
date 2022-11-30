@@ -18,6 +18,8 @@
     width:90%;
     margin: auto;
     margin-top: 30px;
+    padding: 15px;
+    height: 230px ;
 }
 .card_container{
     width:25%;
@@ -30,7 +32,7 @@
     transition: .5s ease-out;
 }
 .category_card:hover{
-    transform: translateY(1);
+    padding-bottom: 5px;
 }
 .category_card_img{
     width:100%;
