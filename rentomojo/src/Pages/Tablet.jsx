@@ -23,7 +23,7 @@ const Tablet = () => {
   const { sliderValue } = useContext(FilterContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5500/electronics/tablets/${params.tabletid}`)
+    fetch(`https://rentomojo-backend.up.railway.app/electronics/tablets/${params.tabletid}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

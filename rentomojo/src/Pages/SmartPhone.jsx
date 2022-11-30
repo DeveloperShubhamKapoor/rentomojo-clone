@@ -24,7 +24,7 @@ const SmartPhone = () => {
   const [display, setDisplay] = useState("none");
 
   useEffect(() => {
-    fetch(`http://localhost:5500/electronics/smartphones/${params.smartphoneid}`)
+    fetch(`https://rentomojo-backend.up.railway.app/electronics/smartphones/${params.smartphoneid}`)
       .then((res) => res.json())
       .then((res) => setData({...data,...res}));
   }, []);

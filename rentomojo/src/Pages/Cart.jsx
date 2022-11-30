@@ -50,7 +50,7 @@ const Cart = () => {
     if(!token){
       return navigate("/")
     }
-      fetch("http://localhost:5500/cart",{
+      fetch("https://rentomojo-backend.up.railway.app/cart",{
         method:"GET",
         headers:{
           "Content-Type":"application/json",
@@ -63,7 +63,7 @@ const Cart = () => {
         
   }
   const patchData=(obj,data)=>{
-    fetch(`http://localhost:5500/cart/${obj.id}`,{
+    fetch(`https://rentomojo-backend.up.railway.app/cart/${obj.id}`,{
       method:"PATCH",
       headers:{
         "Content-Type":"application/json",
@@ -76,7 +76,7 @@ const Cart = () => {
   }
 
   const handleDeleteItem=(obj)=>{
-    fetch(`http://localhost:5500/cart/${obj.id}`,{
+    fetch(`https://rentomojo-backend.up.railway.app/cart/${obj.id}`,{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json",

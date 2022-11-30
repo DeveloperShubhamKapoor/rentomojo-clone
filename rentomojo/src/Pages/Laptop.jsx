@@ -24,7 +24,7 @@ const Laptop = () => {
   const [display, setDisplay] = useState("none");
 
   useEffect(() => {
-    fetch(`http://localhost:5500/electronics/laptops/${params.laptopid}`)
+    fetch(`https://rentomojo-backend.up.railway.app/electronics/laptops/${params.laptopid}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
