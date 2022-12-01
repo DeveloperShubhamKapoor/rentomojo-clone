@@ -17,6 +17,8 @@ const initCartDetail = {
 
 const Cart = () => {
   const [cartData, setCartData] = useState([]);
+  console.log(cartData.length)
+  console.log(cartData)
   const [userCartDetail,setUserCartDetail] = useState(initCartDetail)
   const navigate = useNavigate()
   const [token,setToken] = useState(JSON.parse(localStorage.getItem("token_rento_mojo")))

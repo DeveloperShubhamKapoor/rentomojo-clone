@@ -27,7 +27,7 @@ const SmartDevice = () => {
   useEffect(() => {
     fetch(`https://rentomojo-backend.up.railway.app/electronics/smartdevices/${params.smartdeviceid}`)
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((res) => setData({...data,...res}));
   }, []);
   return (
     <div>

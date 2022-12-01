@@ -25,7 +25,7 @@ const Tablet = () => {
   useEffect(() => {
     fetch(`https://rentomojo-backend.up.railway.app/electronics/tablets/${params.tabletid}`)
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((res) => setData({...data,...res}));
   }, []);
   return (
     <div>

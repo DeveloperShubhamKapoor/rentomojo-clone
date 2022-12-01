@@ -26,7 +26,7 @@ const Laptop = () => {
   useEffect(() => {
     fetch(`https://rentomojo-backend.up.railway.app/electronics/laptops/${params.laptopid}`)
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((res) => setData({...data,...res}));
   }, []);
   return (
     <div>
