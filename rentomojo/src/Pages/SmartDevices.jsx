@@ -13,7 +13,7 @@ const SmartDevices = () => {
 
   
     useEffect(() => {
-      fetch("http://localhost:5500/electronics/smartdevices")
+      fetch("https://rentomojo-backend.up.railway.app/electronics/smartdevices")
         .then((res) => res.json())
         .then((data) => setSmartdevicesData(data));
     }, []);

@@ -12,7 +12,7 @@ const SmartPhones = () => {
   const [smartphoneChecked, setSmartphoneChecked] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5500/electronics/smartphones")
+    fetch("https://rentomojo-backend.up.railway.app/electronics/smartphones")
       .then((res) => res.json())
       .then((data) => setSmartphonesData(data));
     setSmartphoneChecked(true);

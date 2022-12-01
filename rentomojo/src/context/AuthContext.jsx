@@ -19,8 +19,5 @@ export const AuthContextProvider = ({ children }) => {
       [name]:value
     })
   }
-  const handleRegister=()=>{
-    fetch("http://localhost:5500/")
-  }
   return <AuthContext.Provider value={{isAuth,handleChange}}>{children}</AuthContext.Provider>;
 };

@@ -22,7 +22,6 @@ const LeftSidebar = () => {
     const data = ["Smartphones", "Smart Devices", "Laptop", "Tablets"];
     const {category} = useContext(FilterContext);
     const [checked,setIsChecked] = useState(false)
-    console.log(category)
   return (
     <div>
         <Navbar />

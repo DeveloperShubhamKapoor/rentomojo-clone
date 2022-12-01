@@ -33,7 +33,7 @@ const RightSidebar = ({ data }) => {
   const loggedInToken = JSON.parse(localStorage.getItem("token_rento_mojo"))
   const handleCart = () => {
     if(loggedInToken){
-      fetch("http://localhost:5500/cart", {
+      fetch("https://rentomojo-backend.up.railway.app/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

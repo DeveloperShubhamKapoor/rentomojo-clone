@@ -40,7 +40,7 @@ export const Login=()=>{
       }
     }
     else{
-      fetch("http://localhost:5500/login",{
+      fetch("https://rentomojo-backend.up.railway.app/login",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
