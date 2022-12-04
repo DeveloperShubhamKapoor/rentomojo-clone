@@ -4,6 +4,7 @@ import { Login } from '../common/Login'
 import RightSidebar from '../common/RightSidebar'
 import { Signup } from '../common/Signup'
 import Cart from '../Pages/Cart'
+import { Checkout } from '../Pages/Checkout'
 import Electronics from '../Pages/Electronics'
 import Homepage from '../Pages/Homepage'
 import Laptop from '../Pages/Laptop'
@@ -32,6 +33,7 @@ const AllRoutes = () => {
             <Route path="/electronics/laptops/:laptopid" element={<Laptop/>}/>
             <Route path="/electronics/tablets" element={<Tablets/>}/>
             <Route path="/electronics/tablets/:tabletid" element={<Tablet/>}/>
+            <Route path="/checkout" element={<Checkout/>} />
         </Routes>
     </div>
   )
